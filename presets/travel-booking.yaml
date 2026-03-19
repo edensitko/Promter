@@ -1,0 +1,53 @@
+name: travel-booking
+description: A stunning travel and booking website with multiple dreamy UI styles, rich animations, and an interactive 3D globe.
+category: specialized
+
+prompts:
+  - pick_one:
+      - layouts/landing-layout.md
+      - layouts/gallery-layout.md
+  - 3d/3d-globe.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/modern-ui.md
+        - ui/glassmorphism-ui.md
+        - ui/gradient-ui.md
+        - ui/aurora-ui.md
+        - ui/organic-ui.md
+        - ui/minimal-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/scroll-animations.md
+        - animations/hover-effects.md
+        - animations/stagger-animations.md
+        - animations/page-transitions.md
+        - animations/cursor-effects.md
+        - animations/particle-effects.md
+        - animations/liquid-animations.md
+        - animations/text-animations.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: true
+
+metadata:
+  difficulty: advanced
+  estimated_components: 28
+  tags:
+    - travel
+    - booking
+    - hotel
+    - flight
+    - vacation
+    - trip
+    - destination
+    - tourism
+    - explore

@@ -1,0 +1,111 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","modern-ui",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","modern-ui","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","modern-ui","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T19f1,# Modern UI Prompt
+
+## Role
+
+You are a senior frontend designer and UI engineer specializing in modern, contemporary design systems. You have deep expertise in creating clean, sophisticated interfaces that balance aesthetics with usability. Your work is informed by the latest trends from leading design teams at companies like Apple, Stripe, Linear, and Vercel.
+
+## Task
+
+Design and build a modern, visually striking website UI that communicates professionalism and forward-thinking craftsmanship. The interface should feel fresh, intentional, and polished --- leveraging bold typography, generous whitespace, smooth micro-interactions, and a refined color palette. Every element on the page must serve a clear purpose, and the overall composition should guide the user's eye naturally through the content hierarchy.
+
+## Design Goals
+
+- **Clarity above all**: Every section, component, and element must communicate its purpose instantly. Remove anything that does not directly support comprehension or engagement.
+- **Bold visual hierarchy**: Use scale contrast between headings, subheadings, and body text to create a strong typographic rhythm that draws users through the page.
+- **Purposeful whitespace**: Treat negative space as a first-class design element. Generous margins and padding should give content room to breathe and reinforce grouping.
+- **Polished micro-interactions**: Subtle hover states, smooth scroll behaviors, and refined transitions should make the interface feel alive without being distracting.
+- **Responsive excellence**: The design must look intentional and beautiful across all breakpoints --- from large desktop monitors down to mobile devices.
+
+## UI Requirements
+
+- A full-width hero section with a large headline (48px--80px), a concise subtitle, and a prominent call-to-action button with hover animation.
+- A navigation bar that is minimal, sticky, and uses a transparent-to-solid background transition on scroll.
+- Section dividers that use whitespace and subtle background color shifts rather than hard lines.
+- Card-based content layouts with rounded corners (12px--16px), soft drop shadows, and slight scale-up on hover.
+- Icon usage should be consistent, using a single icon library (such as Lucide or Heroicons) at uniform stroke widths.
+- Image treatments should include subtle border-radius and optional soft shadow or gradient overlays.
+- A footer with clear column layout, muted color scheme, and logical link grouping.
+- Accessible color contrast ratios meeting WCAG AA standards at minimum.
+- Smooth page-level scroll animations using intersection observers or a library like Framer Motion.
+
+## Color Palette Guidelines
+
+Adopt a neutral-dominant palette with one strong accent color to anchor interactive elements and calls to action.
+
+- **Primary background**: White (`#FFFFFF`) or near-white (`#FAFAFA`).
+- **Secondary background**: Light gray (`#F3F4F6`) for alternating sections.
+- **Primary text**: Dark charcoal (`#111827`) for headings, medium gray (`#4B5563`) for body copy.
+- **Accent color**: A single vibrant hue --- electric blue (`#2563EB`), violet (`#7C3AED`), or emerald (`#059669`) --- used sparingly for buttons, links, and highlights.
+- **Border and divider tones**: Very light gray (`#E5E7EB`) to maintain subtlety.
+- **Hover and active states**: Darken accent by 10--15% or add a subtle box-shadow glow in the accent hue.
+
+## Typography
+
+- **Heading font**: Inter, Satoshi, or General Sans --- set in semibold or bold weight. Use letter-spacing of `-0.02em` to `-0.04em` for tighter, more modern headline feel.
+- **Body font**: Inter or system font stack for optimal readability at 16px--18px base size with 1.6--1.75 line-height.
+- **Monospace accent** (optional): JetBrains Mono or Fira Code for any code snippets or technical labels.
+- **Scale**: Use a modular type scale (e.g., 1.250 or 1.333 ratio) to maintain consistent hierarchy across headings (h1 through h6) and body text.
+
+## Technology Suggestions
+
+- **Framework**: React 18+ or Next.js 14+ (App Router) for component-based architecture and server-side rendering.
+- **Styling**: Tailwind CSS 3+ for utility-first styling with a well-configured `tailwind.config.js` extending the default theme.
+- **Animations**: Framer Motion for declarative entrance animations, hover effects, and layout transitions.
+- **Icons**: Lucide React or Heroicons for a clean, consistent icon set.
+- **Fonts**: Google Fonts or Fontsource for self-hosted font loading with `font-display: swap`.
+- **Linting**: ESLint + Prettier configured for consistent code formatting.
+
+## Expected Output
+
+### Component Structure
+
+Generate the following components, each in its own file:
+
+- `Navbar.tsx` --- Sticky navigation with transparent-to-solid scroll behavior, logo, nav links, and CTA button.
+- `Hero.tsx` --- Full-width hero with large headline, subtitle, primary CTA, and optional secondary action.
+- `Features.tsx` --- Grid or alternating layout showcasing 3--6 features with icons, titles, and descriptions.
+- `Testimonials.tsx` --- Carousel or grid of testimonial cards with avatar, quote, name, and role.
+- `CTA.tsx` --- A visually distinct call-to-action banner section with contrasting background.
+- `Footer.tsx` --- Multi-column footer with navigation links, social icons, and copyright.
+- `Layout.tsx` --- Wrapper component that composes Navbar, main content area, and Footer.
+
+### Code Requirements
+
+- All components must be written in TypeScript with proper type annotations and interfaces.
+- Use functional components with React hooks exclusively --- no class components.
+- Tailwind classes should be organized logically: layout, spacing, typography, color, then state variants.
+- Responsive design must be implemented using Tailwind breakpoint prefixes (`sm:`, `md:`, `lg:`, `xl:`).
+- Animations should degrade gracefully and respect the `prefers-reduced-motion` media query.
+- Semantic HTML5 elements (`<header>`, `<main>`, `<section>`, `<footer>`, `<nav>`) must be used throughout.
+- All interactive elements must be keyboard-accessible with visible focus indicators.
+
+### Design Explanation
+
+Accompany the code with a brief design rationale (3--5 paragraphs) that covers:
+
+1. The visual strategy --- why this particular layout and typographic treatment was chosen.
+2. Color usage --- how the palette supports brand perception and guides user attention.
+3. Interaction design --- what micro-interactions are used and why they improve UX.
+4. Responsive approach --- how the layout adapts across breakpoints and what trade-offs were made.
+5. Accessibility considerations --- specific steps taken to ensure inclusive design.
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"ui/modern-ui.md","category":"ui","name":"modern-ui","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Modern UI Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Modern UI Prompt — Free UI Style prompt module (6.5 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/modern-ui/"}],["$","meta","9",{"property":"og:title","content":"Modern UI Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free UI Style prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/modern-ui/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

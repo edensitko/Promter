@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6C63FF;
+  --color-primary-dark: #5A52D5;
+  --color-primary-light: #8B85FF;
+  --color-accent: #00D4AA;
+  --color-accent-dark: #00B893;
+  --color-surface: #09090F;
+  --color-surface-2: #12121A;
+  --color-surface-3: #1A1A26;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #E0E0E8;
+    background-color: var(--color-surface);
+  }
+
+  ::selection {
+    background-color: rgba(108, 99, 255, 0.4);
+    color: #FFFFFF;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-bright {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    .glass { background: rgba(18, 18, 26, 0.95); }
+    .glass-bright { background: rgba(26, 26, 38, 0.95); }
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #6C63FF 0%, #00D4AA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 40px rgba(108, 99, 255, 0.15), 0 0 80px rgba(108, 99, 255, 0.05);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px rgba(0, 212, 170, 0.15), 0 0 80px rgba(0, 212, 170, 0.05);
+  }
+
+  .chat-gradient {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.12) 0%, rgba(0, 212, 170, 0.08) 100%);
+  }
+
+  .typing-dot {
+    animation: typingDot 1.4s ease-in-out infinite;
+  }
+  .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+}
+
+@keyframes typingDot {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

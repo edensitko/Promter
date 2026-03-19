@@ -1,0 +1,132 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","gradient-ui",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","gradient-ui","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","gradient-ui","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T1369,# Bold Gradient UI Design Prompt
+
+## Role
+
+You are an expert UI designer and front-end engineer who specializes in vibrant,
+gradient-heavy web design. You understand color theory, mesh gradient generation,
+and how to combine bold color transitions with clean typography to produce striking
+yet readable interfaces. You keep performance and accessibility top of mind even
+when pushing visual boundaries.
+
+## Task
+
+Create a fully functional, single-page website that uses bold gradients as its
+primary visual language. Every major surface — backgrounds, cards, buttons, text
+highlights — should leverage gradients, mesh gradients, or animated color
+transitions to deliver a vivid, modern aesthetic.
+
+## Design Goals
+
+- **Color-forward identity**: Gradients are not decoration; they *are* the design
+  system. The palette should feel intentional and cohesive.
+- **Depth and dimension**: Use gradient layering, glassmorphism, and soft shadows
+  to create a sense of spatial depth without relying on flat blocks of color.
+- **Smooth motion**: Animated gradient shifts should feel organic and fluid, never
+  jarring or distracting.
+- **Readability first**: Despite heavy color usage, all text must pass WCAG AA
+  contrast ratios against its gradient background.
+
+## Requirements
+
+### Visual Design
+
+1. Define a primary gradient spectrum of 3-5 anchor colors that blend harmoniously
+   (e.g., violet to pink to orange, or teal to emerald to lime).
+2. Use CSS `linear-gradient`, `radial-gradient`, and `conic-gradient` for surfaces.
+3. Implement at least one mesh gradient section (using layered radial gradients or
+   an SVG/Canvas approach).
+4. Cards and containers should use frosted-glass (glassmorphism) overlays with
+   `backdrop-filter: blur()` sitting on top of gradient backgrounds.
+5. Buttons must feature gradient fills that shift color on hover via `background-position`
+   animation or CSS transition.
+6. At least one section should use an animated gradient background that slowly cycles
+   through the color spectrum using CSS `@keyframes`.
+
+### Typography
+
+1. Use a clean sans-serif font (Inter, Satoshi, General Sans, or similar).
+2. Headings may feature gradient text fills via `background-clip: text`.
+3. Ensure a solid fallback color behind every gradient text element for
+   accessibility and graceful degradation.
+
+### Layout
+
+1. A full-viewport hero section with a large animated mesh gradient background,
+   centered headline, sub-headline, and CTA button.
+2. A features/benefits section with gradient-bordered or gradient-filled cards
+   arranged in a responsive grid.
+3. A testimonial or social-proof section with glassmorphic quote cards.
+4. A CTA / newsletter section with a vibrant gradient backdrop.
+5. A minimal footer with gradient divider line.
+
+### Animation
+
+1. Hero gradient must animate continuously (subtle hue rotation or position shift).
+2. Cards should reveal with a staggered fade-and-slide on scroll.
+3. Buttons must have a smooth gradient transition on hover (no abrupt color jump).
+4. Respect `prefers-reduced-motion` by disabling or simplifying all animations.
+
+### Responsiveness
+
+1. All gradient effects must render correctly on mobile and tablet viewports.
+2. Glassmorphism fallback for browsers that do not support `backdrop-filter`.
+3. Layout must reflow from multi-column to single-column without breaking
+   gradient overlays.
+
+## Technology Suggestions
+
+| Layer         | Recommended                                          |
+|---------------|------------------------------------------------------|
+| Markup        | Semantic HTML5                                       |
+| Styling       | CSS3 custom properties, `@property` for Houdini      |
+| Animation     | CSS keyframes, optional GSAP or Framer Motion         |
+| Mesh Gradient | CSS layered radials, or Canvas (e.g., Granim.js)      |
+| Framework     | React, Svelte, or Vanilla JS                         |
+| Build Tool    | Vite                                                 |
+| Accessibility | ARIA labels, color contrast checks, reduced-motion   |
+
+## Expected Output Structure
+
+```
+gradient-ui/
+  index.html              # Main document
+  css/
+    variables.css         # Gradient definitions, color tokens, spacing
+    base.css              # Reset, typography, global gradient utilities
+    components.css        # Cards, buttons, glassmorphic containers
+    animations.css        # Keyframe definitions for gradient motion
+    responsive.css        # Breakpoint overrides
+  js/
+    main.js               # Scroll-triggered reveals, optional mesh canvas
+  assets/
+    images/               # Fallback static gradient images for old browsers
+```
+
+## Evaluation Criteria
+
+- Visual impact and cohesion of the gradient palette.
+- Smoothness and subtlety of animated gradients.
+- Text readability over every gradient surface (WCAG AA minimum).
+- Graceful degradation on older browsers and reduced-motion preferences.
+- Clean, modular, well-documented code.
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"ui/gradient-ui.md","category":"ui","name":"gradient-ui","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Bold Gradient UI Design Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Bold Gradient UI Design Prompt — Free UI Style prompt module (4.8 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/gradient-ui/"}],["$","meta","9",{"property":"og:title","content":"Bold Gradient UI Design Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free UI Style prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/gradient-ui/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

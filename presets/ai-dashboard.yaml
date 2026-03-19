@@ -1,0 +1,54 @@
+name: ai-dashboard
+description: A futuristic AI analytics dashboard with multiple UI themes, varied 3D visualizations, and dynamic animation selections.
+category: dashboard
+
+prompts:
+  # Core layout — always included
+  - layouts/dashboard-layout.md
+  - layouts/routing.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/futuristic-ui.md
+        - ui/dark-ui.md
+        - ui/glassmorphism-ui.md
+        - ui/cyberpunk-ui.md
+        - ui/aurora-ui.md
+
+  # 3D elements — randomly pick one
+  - pick_one:
+      - 3d/3d-dashboard.md
+      - 3d/3d-background.md
+      - 3d/3d-hero.md
+      - 3d/3d-particles.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/scroll-animations.md
+        - animations/animated-cards.md
+        - animations/loading-animations.md
+        - animations/microinteractions.md
+        - animations/stagger-animations.md
+        - animations/morphing-animations.md
+        - animations/hover-effects.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: true
+
+metadata:
+  difficulty: advanced
+  estimated_components: 24
+  tags:
+    - ai
+    - machine-learning
+    - analytics
+    - dashboard
+    - 3d-visualizations
+    - randomized

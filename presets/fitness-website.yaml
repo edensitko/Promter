@@ -1,0 +1,54 @@
+name: fitness-website
+description: A high-energy fitness and gym website with multiple bold UI styles, dynamic animations, and immersive 3D backgrounds.
+category: landing
+
+prompts:
+  - layouts/landing-layout.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/dark-ui.md
+        - ui/gradient-ui.md
+        - ui/modern-ui.md
+        - ui/brutalist-ui.md
+        - ui/cyberpunk-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/scroll-animations.md
+        - animations/hover-effects.md
+        - animations/text-animations.md
+        - animations/stagger-animations.md
+        - animations/animated-buttons.md
+        - animations/particle-effects.md
+        - animations/cursor-effects.md
+        - animations/morphing-animations.md
+
+  - pick_one:
+      - 3d/3d-background.md
+      - 3d/3d-hero.md
+      - 3d/3d-particles.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: true
+
+metadata:
+  difficulty: intermediate
+  estimated_components: 22
+  tags:
+    - fitness
+    - gym
+    - workout
+    - exercise
+    - health
+    - training
+    - personal-trainer
+    - sports
+    - crossfit

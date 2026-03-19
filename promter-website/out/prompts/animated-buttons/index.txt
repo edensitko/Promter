@@ -1,0 +1,130 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","animated-buttons",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","animated-buttons","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","animated-buttons","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T1638,# Animated Buttons Prompt
+
+## Role
+
+You are a senior frontend designer and micro-interaction specialist. You create button components that feel alive, responsive, and satisfying to interact with — transforming simple clicks into memorable micro-experiences.
+
+## Task
+
+Design and implement a comprehensive library of animated button components. Each button variant should feature unique animation behaviors for hover, click, loading, success, and error states. Buttons must be accessible, performant, and adaptable to any design system.
+
+## Animation Goals
+
+- Create buttons that provide immediate, satisfying feedback on interaction
+- Ensure animations are fast enough to feel responsive (hover: 150–200ms, click: 200–400ms)
+- Communicate state changes clearly through motion (loading, success, error)
+- Maintain text readability and clickability throughout all animation states
+- Support seamless transitions between states without jarring jumps
+
+## Button Animation Catalog
+
+### Ripple Button
+A Material Design-inspired ripple emanates from the click point. The ripple is a circle that scales up and fades out simultaneously. Color is a lighter or darker variant of the button background. Requires JavaScript to capture click coordinates and create/remove ripple elements dynamically.
+
+### Gradient Shift Button
+Background gradient continuously animates or shifts on hover. Use `background-size: 200% 200%` with `background-position` animation. On hover, the gradient shifts direction or speed increases. Creates a dynamic, living feel.
+
+### Morphing Button
+Button morphs between states: resting → loading (shrinks to circle with spinner) → success (expands back with checkmark) → error (shakes with X icon). Each transition is smooth and continuous. The width, border-radius, and content animate together.
+
+### Magnetic Button
+Button is attracted to the cursor as it approaches, with the button surface subtly deforming toward the mouse position. On hover, the button translates slightly toward the cursor. On leave, it springs back with elastic easing. Creates an organic, physical interaction.
+
+### Neon Glow Button
+Button has an animated neon glow effect. On hover, the glow intensifies and pulses. The border and text emit light using layered `box-shadow` and `text-shadow`. Particularly effective on dark backgrounds with vibrant accent colors.
+
+### Liquid Fill Button
+A liquid-like fill animation rises from the bottom on hover, as if the button is filling with color. Use `clip-path` with a wavy SVG path that animates upward, or a pseudo-element with a wave animation on top edge. Text color inverts as the fill passes.
+
+### Elastic Press Button
+Button squishes on press with elastic physics — compresses vertically and expands horizontally slightly, then bounces back on release. Use `transform: scaleX() scaleY()` with spring-physics easing. Provides satisfying tactile feedback.
+
+### Split Text Button
+On hover, each character of the button text animates individually — rising up, fading in, changing color, or shuffling. Characters are wrapped in spans and staggered with CSS animation-delay or GSAP stagger. Text appears to reform or assemble.
+
+### Border Draw Button
+Button border draws itself on hover. Starting from one corner, the border traces the full perimeter. Implemented with four pseudo-elements (or SVG `stroke-dasharray`) that animate in sequence. Clean and minimal.
+
+### Particle Burst Button
+On click, particles burst outward from the button — confetti, sparks, or geometric shapes. Particles are generated dynamically with randomized velocity, rotation, and fade. Use `canvas` or DOM elements with `requestAnimationFrame`.
+
+## Technical Requirements
+
+- Hover transitions must be under 200ms for perceived responsiveness
+- Click/press animations should provide feedback within 100ms
+- Loading state transitions should be smooth (300–500ms morph)
+- All animations must use `transform` and `opacity` for GPU acceleration
+- Button must remain clickable and functional during all animation states
+- Prevent double-click issues during loading/morphing states
+- Support both `<button>` and `<a>` element rendering
+
+## Technology Suggestions
+
+- CSS Transitions and Keyframe Animations
+- Framer Motion for React implementations
+- CSS Custom Properties for theming (colors, durations, intensity)
+- GSAP for complex timeline animations (morph, particle burst)
+- Tailwind CSS for base styling
+- `canvas` API for particle effects
+
+## Expected Output
+
+### Component Structure
+
+```
+components/
+  buttons/
+    RippleButton.jsx
+    GradientButton.jsx
+    MorphButton.jsx
+    MagneticButton.jsx
+    NeonButton.jsx
+    LiquidButton.jsx
+    ElasticButton.jsx
+    SplitTextButton.jsx
+    BorderDrawButton.jsx
+    ParticleButton.jsx
+  buttons/hooks/
+    useRipple.js
+    useMagnetic.js
+    useButtonState.js
+```
+
+### Code Requirements
+
+- Each button should accept standard button props (onClick, disabled, type, children)
+- Support size variants (sm, md, lg) and color themes
+- Include loading, success, and error state support where applicable
+- Export a `ButtonGroup` component for consistent spacing
+- Provide CSS-only versions for ripple, gradient, and border-draw effects
+- Include TypeScript types for all props and states
+
+### Accessibility
+
+- All buttons must be focusable and operable via keyboard (Enter and Space)
+- Focus styles must be visible and not rely solely on animation
+- Respect `prefers-reduced-motion` by falling back to simple opacity transitions
+- Loading states must announce to screen readers via `aria-busy` and `aria-label`
+- Disabled state must be visually distinct and set `aria-disabled`
+- Minimum touch target size of 44x44px
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/animated-buttons.md","category":"animations","name":"animated-buttons","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Animated Buttons Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Animated Buttons Prompt — Free Animation prompt module (5.5 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/animated-buttons/"}],["$","meta","9",{"property":"og:title","content":"Animated Buttons Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/animated-buttons/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

@@ -1,0 +1,162 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","blog-layout",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","blog-layout","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","blog-layout","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T1746,# Blog / Magazine Layout Prompt
+
+## Role
+
+You are a senior front-end developer and editorial designer with deep experience
+building content-rich blog and magazine-style layouts. You understand information
+hierarchy, typographic rhythm, card-based design systems, and how to present large
+volumes of written content in an inviting, scannable format. You prioritize reading
+comfort, performance, and clean content structure.
+
+## Task
+
+Create a fully functional blog or online magazine homepage that showcases articles
+across multiple categories. The layout must support featured posts, category
+filtering, article cards with metadata, and a comfortable long-form reading
+experience. The design should feel editorial and refined.
+
+## Design Goals
+
+- **Content hierarchy**: Featured articles are visually prominent; regular posts
+  are scannable; sidebar or secondary content does not compete for attention.
+- **Reading comfort**: Typography, line length, and spacing are tuned for extended
+  reading sessions.
+- **Discoverability**: Categories, tags, and related articles help users explore
+  the content library.
+- **Performance**: Images are lazy-loaded, content is progressively rendered, and
+  the page loads fast even on slow connections.
+
+## Requirements
+
+### Visual Design
+
+1. Clean, content-first aesthetic with generous whitespace.
+2. A refined color palette: neutral base (white/off-white/light gray) with one or
+   two accent colors for links, categories, and interactive elements.
+3. Serif or editorial sans-serif typeface for headings (e.g., Playfair Display,
+   Fraunces, Newsreader). Clean sans-serif for body text (Inter, Source Sans 3).
+4. Article images should use consistent aspect ratios within each card grid.
+5. Category labels styled as colored badges or pills.
+6. Subtle dividers and borders to separate content zones.
+
+### Layout
+
+1. **Header**: Site logo/name, primary navigation (Home, Categories, About, Contact),
+   and a search icon or bar.
+2. **Featured Section**: A hero area showcasing 1-3 featured articles. The primary
+   featured post should occupy a large card with a background image, overlay title,
+   excerpt, author, date, and estimated reading time. Secondary featured posts
+   appear as smaller companion cards.
+3. **Category Navigation**: A horizontal scrollable row or tabbed interface for
+   filtering by category (e.g., Technology, Design, Business, Lifestyle).
+4. **Article Grid**: A responsive grid (3 columns on desktop, 2 on tablet, 1 on
+   mobile) of article cards. Each card includes:
+   - Thumbnail image
+   - Category badge
+   - Title (linked)
+   - Excerpt (2-3 lines, truncated with CSS)
+   - Author avatar and name
+   - Publication date
+   - Estimated reading time (e.g., "5 min read")
+5. **Sidebar** (optional on desktop, hidden on mobile): Popular posts list,
+   newsletter signup form, tag cloud or category list.
+6. **Pagination or Infinite Scroll**: A "Load More" button or numbered pagination
+   at the bottom of the article grid.
+7. **Footer**: Site links, social media icons, copyright, and a secondary
+   newsletter signup.
+
+### Article Card Component
+
+Each card must be a self-contained, reusable component with the following data:
+
+```
+{
+  "id": "string",
+  "title": "string",
+  "excerpt": "string",
+  "category": "string",
+  "author": { "name": "string", "avatar": "url" },
+  "publishedAt": "ISO 8601 date",
+  "readingTime": "number (minutes)",
+  "thumbnail": "url",
+  "slug": "string"
+}
+```
+
+### Interactivity
+
+1. Category filter tabs update the visible article grid without a full page reload.
+2. Hover effects on cards: subtle lift (translateY + box-shadow) and image zoom.
+3. Search overlay or expandable search bar with debounced input.
+4. Dark mode toggle that persists preference in `localStorage`.
+
+### Responsiveness
+
+1. Three-column grid collapses to two on tablet and one on mobile.
+2. Featured hero section adapts from side-by-side to stacked layout.
+3. Sidebar collapses into a toggleable drawer or moves below the main content.
+4. Navigation collapses into a hamburger menu on mobile.
+
+## Technology Suggestions
+
+| Layer         | Recommended                                         |
+|---------------|-----------------------------------------------------|
+| Markup        | Semantic HTML5, `<article>`, `<aside>`, `<nav>`     |
+| Styling       | CSS3 Grid + Flexbox, custom properties              |
+| Fonts         | Google Fonts (Newsreader + Inter)                   |
+| Images        | `loading="lazy"`, `<picture>` with WebP/AVIF        |
+| Framework     | Next.js, Astro, or Vanilla JS                       |
+| Data          | Static JSON or Markdown with front matter            |
+| Build Tool    | Vite or framework-native bundler                     |
+| Accessibility | Semantic landmarks, ARIA labels, focus management   |
+
+## Expected Output Structure
+
+```
+blog-layout/
+  index.html                # Homepage with featured + grid
+  css/
+    variables.css           # Color tokens, type scale, spacing
+    base.css                # Reset, global typography, dark mode
+    layout.css              # Grid definitions, header, footer, sidebar
+    components.css          # Article cards, badges, buttons, search
+    responsive.css          # Breakpoint overrides
+  js/
+    main.js                 # Category filter, search, dark mode toggle
+    components/
+      article-card.js       # Card rendering logic
+  data/
+    articles.json           # Sample article data (10-15 entries)
+  assets/
+    images/                 # Placeholder thumbnails and avatars
+```
+
+## Evaluation Criteria
+
+- Visual hierarchy makes featured content unmissable and regular content scannable.
+- Typography and spacing create a comfortable reading rhythm.
+- Category filtering works smoothly without layout jank.
+- Dark mode is well-implemented with appropriate color adjustments.
+- Page loads quickly; images are optimized and lazy-loaded.
+- Code is semantic, accessible, and well-organized.
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"layouts/blog-layout.md","category":"layouts","name":"blog-layout","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Blog / Magazine Layout Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Blog / Magazine Layout Prompt — Free Layout prompt module (5.8 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/blog-layout/"}],["$","meta","9",{"property":"og:title","content":"Blog / Magazine Layout Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Layout prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/blog-layout/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

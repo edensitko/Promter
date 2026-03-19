@@ -1,0 +1,154 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","morphing-animations",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","morphing-animations","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","morphing-animations","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T2f71,# Morphing Animations Prompt
+
+## Role
+
+You are a senior frontend developer and motion designer specializing in shape transformation, layout animation, and seamless visual transitions. You understand the mathematics of path interpolation, the FLIP animation technique, and modern browser APIs like View Transitions. You create morphing effects that feel continuous and physically grounded, making elements appear to fluidly transform rather than abruptly switch.
+
+## Task
+
+Design and implement a comprehensive system of morphing and transformation animations. The system covers SVG path morphing, layout transitions, shared element animations, number and text transformations, color interpolation, and state-shifting UI components. Each effect should create the illusion of continuous transformation between two or more states.
+
+## Animation Goals
+
+- Create morphing effects that feel physically continuous — no state should appear to "pop" or teleport
+- Use the FLIP (First, Last, Invert, Play) technique as the foundation for layout morphing
+- Ensure all intermediate states during a morph are visually coherent (no broken shapes or layouts)
+- Leverage hardware acceleration: morph using `transform` and `opacity` wherever possible
+- Support interruption — morphs should be cancellable mid-animation without visual glitching
+- Maintain content readability throughout transitions (text should never be illegible during morphing)
+
+## Animation Catalog
+
+### SVG Path Morphing
+
+#### Shape-to-Shape Morph
+Smoothly morph one SVG path into another — circle to star, logo to abstract, play to pause icon. Both paths must have the same number of points and segments for smooth interpolation. If source and target paths differ in point count, use a path normalization utility to add intermediate points to the shorter path. Interpolate each point's coordinates linearly: `lerp(pointA, pointB, progress)` where `progress` is 0 to 1. Apply easing to the progress value for natural motion: `cubic-bezier(0.4, 0, 0.2, 1)` for standard, `cubic-bezier(0.34, 1.56, 0.64, 1)` for bouncy. Duration: 400-800ms depending on complexity. For icon transitions (play/pause, hamburger/close, plus/minus), use shorter durations (300-400ms). Implementation: update the `d` attribute of an SVG `<path>` element on each animation frame, or use CSS `d: path()` transitions in Chrome/Edge with a JavaScript fallback for Safari/Firefox.
+
+### Layout Morphing
+
+#### Grid-to-List Transition
+Elements smoothly transition between layout configurations — grid view to list view, or any layout rearrangement. **FLIP Implementation**: (1) **First**: Record each element's current `getBoundingClientRect()`. (2) **Last**: Apply the new layout (CSS class change), then record new positions. (3) **Invert**: Calculate the delta (`deltaX = first.left - last.left`, `deltaY = first.top - last.top`, `deltaW = first.width / last.width`, `deltaH = first.height / last.height`). Apply `transform: translate(deltaX, deltaY) scale(deltaW, deltaH)` to snap elements back to their old positions. (4) **Play**: Remove the transform with a transition (`500ms cubic-bezier(0.4, 0, 0.2, 1)`), causing elements to animate to their new positions. Stagger the transition-delay by 30-50ms per element for a cascading effect. Content inside cards should crossfade between grid and list layouts during the morph.
+
+### Shared Element Transitions
+
+#### Card-to-Detail Expansion
+Clicking a card smoothly expands it into a full detail view, with the card's image and title morphing in place. **FLIP technique with clone**: (1) Record the card's position and dimensions. (2) Create a clone or overlay at the card's exact position. (3) Trigger the detail view render. (4) Animate the clone's `transform` from the card's rect to the detail view's rect over 400-500ms. (5) Crossfade content: card content fades out as detail content fades in. The image should scale and reposition smoothly (never crop or distort). Use `object-fit: cover` with animated `object-position` if aspect ratios differ. In Framer Motion, achieve this with `layoutId` on shared elements. Dismiss animation: reverse the morph with the detail view contracting back to the card position.
+
+### Number Morphing
+
+#### Odometer Roll
+Digits animate individually when a number value changes, rolling up or down like a mechanical odometer. Each digit is in its own container with `overflow: hidden`. When a digit changes, the old digit slides upward (or downward for decreasing values) while the new digit slides in from below. Transform: `translateY(-100%)` for old, `translateY(0)` for new, from `translateY(100%)`. Duration: 300ms per digit with `cubic-bezier(0.4, 0, 0.2, 1)`. Stagger digit transitions by 50ms, starting from the rightmost (ones) digit for a cascade effect. Handle multi-digit changes: if going from 9 to 10, animate the new tens digit appearing while ones digit rolls from 9 to 0. Support decimal points and formatting (commas, currency symbols) that stay fixed while digits around them animate. Optionally add a flip variant: digits rotate around the X axis (3D perspective) like an airport departure board.
+
+### Text Morphing
+
+#### Scramble Decode
+Text characters individually animate between two different strings. **Phase 1 - Scramble Out (300ms)**: Each character of the old string is replaced with random characters from a configurable character set (default: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%`) cycling every 30-50ms. Characters scramble starting from left with a stagger of 20ms per character. **Phase 2 - Resolve In (300ms)**: Characters resolve to the new string, again staggered from left, each locking in at 20ms intervals. During resolution, the character cycles slow down before landing on the correct character. If strings differ in length, extra characters fade in or out with `opacity` transition. Each character is a `<span>` with `display: inline-block` for independent animation. Use `requestAnimationFrame` for the cycling loop with frame-counting for timing control.
+
+### Color Morphing
+
+#### Perceptual Color Transition
+Smooth color transitions through perceptually uniform color spaces, avoiding the muddy midpoints of RGB interpolation. Convert colors to OKLCH (Lightness, Chroma, Hue) and interpolate each channel independently. For hue interpolation, take the shortest arc around the hue circle to avoid unexpected color journeys. Implementation: `color-mix()` in CSS where supported (`color-mix(in oklch, color1 var(--progress), color2)`), with JavaScript fallback that converts hex/RGB to OKLCH, interpolates, and converts back. Apply to backgrounds, text, borders, and shadows. Duration: 400-1000ms depending on context. For multi-stop color sequences, chain transitions through an array of color stops with configurable dwell time at each stop. Provide preset palettes: sunrise (orange to pink to purple), ocean (teal to blue to navy), forest (green to emerald to dark green).
+
+### Shape-Shifting Buttons
+
+#### State Morphing Button
+A button that smoothly morphs between distinct visual states: **Default** (text label, rounded rectangle) to **Loading** (circular spinner, smaller footprint) to **Success** (checkmark icon, green) or **Error** (X icon, red). **Default to Loading (400ms)**: Button width animates from full to circular (equal width and height), text fades out at 200ms, spinner fades in at 200ms, border-radius animates to 50%. Use `width` animation on a flex container, or better: `transform: scaleX()` with `clip-path` to avoid layout shift. **Loading to Success (300ms)**: Background morphs to `#10B981` (green), spinner cross-fades to a checkmark SVG (drawn with `stroke-dashoffset` animation, 200ms). Button optionally expands back to show "Success!" text. **Loading to Error (300ms)**: Same pattern but red (`#EF4444`) with X icon. Auto-revert to default state after 2 seconds. All state transitions must handle interruption: if the user clicks again during loading, queue the action rather than breaking the animation.
+
+## Technical Requirements
+
+- FLIP animations must batch all `getBoundingClientRect()` reads before any writes to avoid layout thrashing
+- SVG path morphing requires paths with identical segment counts — include a `normalizePath()` utility that adds points to shorter paths
+- Use `will-change: transform` on morphing elements during animation, remove after completion
+- Number morphing must handle locale-specific formatting (RTL digits, different decimal separators)
+- Text scramble must preserve whitespace and non-alphabetic characters (don't scramble spaces or punctuation)
+- Color interpolation in OKLCH requires conversion utilities — bundle a lightweight color math module (under 2KB)
+- Shared element transitions should use the View Transitions API where available (`document.startViewTransition()`) with FLIP fallback
+- All morphing animations must support `animation.cancel()` or equivalent interruption without visual artifacts
+- Layout morphing must account for scroll position changes — recalculate positions if the user scrolls during transition
+- Test morphing on variable refresh rate displays (120Hz, 60Hz) — use delta-time, not frame counting
+
+## Technology Suggestions
+
+- FLIP technique (manual implementation or `@formkit/auto-animate`)
+- View Transitions API for shared element transitions (progressive enhancement)
+- Framer Motion `layoutId`, `AnimatePresence`, and `motion.div` layout animations
+- GSAP MorphSVGPlugin for path morphing (or Flubber.js for open-source alternative)
+- `d3-interpolate` for robust value interpolation (paths, colors, numbers)
+- CSS `d: path()` transitions for simple SVG morphs in Chromium browsers
+- OKLCH color space via CSS `color-mix()` or `culori` library for JavaScript
+- React Spring for physics-based morphing with interruption support
+- Tailwind CSS for base styling
+
+## Expected Output
+
+### Component Structure
+
+```
+components/
+  morph/
+    SVGMorph.jsx
+    LayoutMorph.jsx
+    SharedElement.jsx
+    NumberMorph.jsx
+    TextScramble.jsx
+    ColorMorph.jsx
+    MorphButton.jsx
+  providers/
+    SharedElementProvider.jsx
+  hooks/
+    useFLIP.js
+    usePathMorph.js
+    useNumberRoll.js
+    useTextScramble.js
+    useColorInterpolation.js
+    useViewTransition.js
+  utils/
+    normalizePath.js
+    oklchConvert.js
+    flipCalculator.js
+```
+
+### Code Requirements
+
+- `SharedElementProvider` wraps the app and tracks registered shared elements by `layoutId`
+- `useFLIP` hook returns `{ ref, record, play }` for imperative FLIP control
+- `SVGMorph` accepts an array of path strings and a current index, morphing between them on index change
+- `NumberMorph` accepts `value` prop and automatically detects changed digits for targeted animation
+- `TextScramble` accepts `text` prop and triggers scramble/decode on every change
+- `MorphButton` accepts `state` prop (`idle`, `loading`, `success`, `error`) with automatic transition sequencing
+- All components support `duration`, `easing`, and `onComplete` callback props
+- Include a `useViewTransition` hook that wraps `document.startViewTransition()` with fallback to FLIP
+- Export path normalization and color conversion utilities as standalone modules
+- TypeScript types for all props, states, and configuration objects
+
+### Accessibility
+
+- Respect `prefers-reduced-motion`: replace all morphing with instant state switches (crossfade at most)
+- SVG morphing icons must have `aria-label` updated to reflect the current state (e.g., "Play" to "Pause")
+- Shared element transitions must not break focus management — focus the appropriate element in the new view
+- Number morphing must expose the final value to screen readers via `aria-live="polite"` and `aria-atomic="true"`
+- Text scramble intermediate states are decorative — use `aria-label` with the target text from the start
+- Shape-shifting button must announce its state: `aria-busy="true"` during loading, `aria-label` for success/error
+- Layout morphing must not cause content reflow that displaces the user's reading position
+- Color transitions must maintain WCAG AA contrast ratio at every interpolated step, not just start and end
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/morphing-animations.md","category":"animations","name":"morphing-animations","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Morphing Animations Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Morphing Animations Prompt — Free Animation prompt module (11.8 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/morphing-animations/"}],["$","meta","9",{"property":"og:title","content":"Morphing Animations Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/morphing-animations/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

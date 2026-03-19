@@ -1,0 +1,46 @@
+name: saas-landing
+description: A polished SaaS marketing page with multiple UI styles and rich animation combinations for high-converting landing pages.
+category: marketing
+
+prompts:
+  # Core layout
+  - layouts/saas-layout.md
+  - layouts/routing.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/modern-ui.md
+        - ui/minimal-ui.md
+        - ui/gradient-ui.md
+        - ui/glassmorphism-ui.md
+        - ui/claymorphism-ui.md
+        - ui/aurora-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/scroll-animations.md
+        - animations/animated-buttons.md
+        - animations/hover-effects.md
+        - animations/text-animations.md
+        - animations/loading-animations.md
+        - animations/stagger-animations.md
+        - animations/microinteractions.md
+        - animations/cursor-effects.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: false
+
+metadata:
+  difficulty: intermediate
+  estimated_components: 18
+  tags:
+    - saas
+    - marketing
+    - randomized

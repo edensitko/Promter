@@ -1,0 +1,1576 @@
+{
+  "presets": {
+    "agency-website": {
+      "name": "agency-website",
+      "description": "A visually striking creative agency website with multiple UI styles and rich animation effects for a unique presentation.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/glassmorphism-ui.md",
+              "ui/gradient-ui.md",
+              "ui/modern-ui.md",
+              "ui/futuristic-ui.md",
+              "ui/aurora-ui.md",
+              "ui/vaporwave-ui.md",
+              "ui/art-deco-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/page-transitions.md",
+              "animations/text-animations.md",
+              "animations/hover-effects.md",
+              "animations/animated-buttons.md",
+              "animations/cursor-effects.md",
+              "animations/stagger-animations.md",
+              "animations/liquid-animations.md",
+              "animations/morphing-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 18,
+        "tags": [
+          "agency",
+          "creative",
+          "randomized"
+        ]
+      }
+    },
+    "ai-dashboard": {
+      "name": "ai-dashboard",
+      "description": "A futuristic AI analytics dashboard with multiple UI themes, varied 3D visualizations, and dynamic animation selections.",
+      "category": "dashboard",
+      "prompts": [
+        "layouts/dashboard-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/futuristic-ui.md",
+              "ui/dark-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/aurora-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-dashboard.md",
+            "3d/3d-background.md",
+            "3d/3d-hero.md",
+            "3d/3d-particles.md"
+          ]
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/animated-cards.md",
+              "animations/loading-animations.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/morphing-animations.md",
+              "animations/hover-effects.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 24,
+        "tags": [
+          "ai",
+          "machine-learning",
+          "analytics",
+          "dashboard",
+          "3d-visualizations",
+          "randomized"
+        ]
+      }
+    },
+    "business-website": {
+      "name": "business-website",
+      "description": "A clean and professional corporate website with multiple UI styles and varied animations for a polished look each generation.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/minimal-ui.md",
+              "ui/neumorphism-ui.md",
+              "ui/organic-ui.md",
+              "ui/claymorphism-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/page-transitions.md",
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/animated-buttons.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "beginner",
+        "estimated_components": 12,
+        "tags": [
+          "corporate",
+          "business",
+          "professional",
+          "randomized"
+        ]
+      }
+    },
+    "consultant-website": {
+      "name": "consultant-website",
+      "description": "A professional consultant website with multiple refined UI styles and smooth animations for building trust with a fresh look.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/minimal-ui.md",
+              "ui/modern-ui.md",
+              "ui/neumorphism-ui.md",
+              "ui/organic-ui.md",
+              "ui/art-deco-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/hover-effects.md",
+              "animations/scroll-animations.md",
+              "animations/page-transitions.md",
+              "animations/animated-buttons.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/text-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "beginner",
+        "estimated_components": 10,
+        "tags": [
+          "consultant",
+          "professional",
+          "randomized",
+          "services"
+        ]
+      }
+    },
+    "crypto-dashboard": {
+      "name": "crypto-dashboard",
+      "description": "A cryptocurrency trading dashboard with multiple dark UI themes, 3D elements, and dynamic animation combinations.",
+      "category": "dashboard",
+      "prompts": [
+        "layouts/dashboard-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/dark-ui.md",
+              "ui/futuristic-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/gradient-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-card.md",
+            "3d/3d-dashboard.md",
+            "3d/3d-background.md",
+            "3d/3d-globe.md"
+          ]
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/animated-cards.md",
+              "animations/hover-effects.md",
+              "animations/loading-animations.md",
+              "animations/scroll-animations.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/morphing-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 25,
+        "tags": [
+          "crypto",
+          "trading",
+          "dashboard",
+          "randomized",
+          "3d",
+          "real-time"
+        ]
+      }
+    },
+    "developer-portfolio": {
+      "name": "developer-portfolio",
+      "description": "A developer portfolio with multiple dark and edgy UI styles, varied animation effects for a unique personal brand.",
+      "category": "portfolio",
+      "prompts": [
+        "layouts/portfolio-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/dark-ui.md",
+              "ui/futuristic-ui.md",
+              "ui/brutalist-ui.md",
+              "ui/minimal-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/vaporwave-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/hover-effects.md",
+              "animations/animated-cards.md",
+              "animations/scroll-animations.md",
+              "animations/text-animations.md",
+              "animations/page-transitions.md",
+              "animations/cursor-effects.md",
+              "animations/stagger-animations.md",
+              "animations/particle-effects.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 16,
+        "tags": [
+          "developer",
+          "portfolio",
+          "randomized",
+          "projects"
+        ]
+      }
+    },
+    "ecommerce-modern": {
+      "name": "ecommerce-modern",
+      "description": "A sleek e-commerce storefront with multiple UI styles and rich animation combinations for a premium shopping experience.",
+      "category": "ecommerce",
+      "prompts": [
+        "layouts/ecommerce-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/minimal-ui.md",
+              "ui/dark-ui.md",
+              "ui/gradient-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/claymorphism-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/hover-effects.md",
+              "animations/animated-cards.md",
+              "animations/scroll-animations.md",
+              "animations/loading-animations.md",
+              "animations/animated-buttons.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/cursor-effects.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 22,
+        "tags": [
+          "ecommerce",
+          "online-store",
+          "product-cards",
+          "shopping",
+          "randomized"
+        ]
+      }
+    },
+    "education-platform": {
+      "name": "education-platform",
+      "description": "An engaging online education platform with multiple playful yet professional UI styles and delightful learning interactions.",
+      "category": "specialized",
+      "prompts": [
+        {
+          "pick_one": [
+            "layouts/dashboard-layout.md",
+            "layouts/saas-layout.md"
+          ]
+        },
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/claymorphism-ui.md",
+              "ui/minimal-ui.md",
+              "ui/gradient-ui.md",
+              "ui/organic-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/loading-animations.md",
+              "animations/animated-cards.md",
+              "animations/hover-effects.md",
+              "animations/text-animations.md",
+              "animations/morphing-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 24,
+        "tags": [
+          "education",
+          "learning",
+          "course",
+          "online",
+          "student",
+          "teacher",
+          "lms",
+          "e-learning",
+          "school"
+        ]
+      }
+    },
+    "event-conference": {
+      "name": "event-conference",
+      "description": "A dynamic event and conference website with multiple UI styles, countdown animations, speaker showcases, and eye-catching effects.",
+      "category": "landing",
+      "prompts": [
+        "layouts/event-layout.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/gradient-ui.md",
+              "ui/futuristic-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/aurora-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/stagger-animations.md",
+              "animations/text-animations.md",
+              "animations/hover-effects.md",
+              "animations/particle-effects.md",
+              "animations/animated-buttons.md",
+              "animations/microinteractions.md",
+              "animations/cursor-effects.md",
+              "animations/morphing-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 24,
+        "tags": [
+          "event",
+          "conference",
+          "summit",
+          "meetup",
+          "speakers",
+          "schedule",
+          "tickets",
+          "agenda",
+          "countdown"
+        ]
+      }
+    },
+    "fintech-dashboard": {
+      "name": "fintech-dashboard",
+      "description": "A sophisticated fintech dashboard with multiple premium UI styles, real-time data animations, and immersive 3D visualizations.",
+      "category": "dashboard",
+      "prompts": [
+        "layouts/dashboard-layout.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/dark-ui.md",
+              "ui/modern-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/art-deco-ui.md",
+              "ui/futuristic-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/microinteractions.md",
+              "animations/scroll-animations.md",
+              "animations/loading-animations.md",
+              "animations/stagger-animations.md",
+              "animations/morphing-animations.md",
+              "animations/hover-effects.md",
+              "animations/animated-cards.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-dashboard.md",
+            "3d/3d-globe.md",
+            "3d/3d-particles.md"
+          ]
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 30,
+        "tags": [
+          "fintech",
+          "banking",
+          "finance",
+          "dashboard",
+          "payment",
+          "trading",
+          "investment",
+          "money",
+          "stocks",
+          "crypto"
+        ]
+      }
+    },
+    "fitness-website": {
+      "name": "fitness-website",
+      "description": "A high-energy fitness and gym website with multiple bold UI styles, dynamic animations, and immersive 3D backgrounds.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/dark-ui.md",
+              "ui/gradient-ui.md",
+              "ui/modern-ui.md",
+              "ui/brutalist-ui.md",
+              "ui/cyberpunk-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/text-animations.md",
+              "animations/stagger-animations.md",
+              "animations/animated-buttons.md",
+              "animations/particle-effects.md",
+              "animations/cursor-effects.md",
+              "animations/morphing-animations.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-background.md",
+            "3d/3d-hero.md",
+            "3d/3d-particles.md"
+          ]
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 22,
+        "tags": [
+          "fitness",
+          "gym",
+          "workout",
+          "exercise",
+          "health",
+          "training",
+          "personal-trainer",
+          "sports",
+          "crossfit"
+        ]
+      }
+    },
+    "food-delivery": {
+      "name": "food-delivery",
+      "description": "A mouth-watering food delivery app with multiple vibrant UI styles, playful animations, and a seamless ordering experience.",
+      "category": "ecommerce",
+      "prompts": [
+        {
+          "pick_one": [
+            "layouts/ecommerce-layout.md",
+            "layouts/landing-layout.md"
+          ]
+        },
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/claymorphism-ui.md",
+              "ui/gradient-ui.md",
+              "ui/organic-ui.md",
+              "ui/minimal-ui.md",
+              "ui/retro-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/microinteractions.md",
+              "animations/hover-effects.md",
+              "animations/scroll-animations.md",
+              "animations/stagger-animations.md",
+              "animations/animated-cards.md",
+              "animations/liquid-animations.md",
+              "animations/loading-animations.md",
+              "animations/animated-buttons.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 24,
+        "tags": [
+          "food",
+          "delivery",
+          "restaurant",
+          "ordering",
+          "menu",
+          "cuisine",
+          "takeout",
+          "uber-eats",
+          "doordash"
+        ]
+      }
+    },
+    "freelancer-marketplace": {
+      "name": "freelancer-marketplace",
+      "description": "A professional freelancer marketplace with multiple UI styles, interactive profile animations, and immersive card effects.",
+      "category": "ecommerce",
+      "prompts": [
+        {
+          "pick_one": [
+            "layouts/ecommerce-layout.md",
+            "layouts/social-feed-layout.md"
+          ]
+        },
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/minimal-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/gradient-ui.md",
+              "ui/aurora-ui.md",
+              "ui/claymorphism-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/animated-cards.md",
+              "animations/morphing-animations.md",
+              "animations/cursor-effects.md",
+              "animations/loading-animations.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-card.md",
+            "3d/3d-background.md"
+          ]
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 28,
+        "tags": [
+          "freelancer",
+          "marketplace",
+          "gig",
+          "hire",
+          "talent",
+          "freelance",
+          "upwork",
+          "fiverr",
+          "services",
+          "portfolio"
+        ]
+      }
+    },
+    "gaming-website": {
+      "name": "gaming-website",
+      "description": "An immersive gaming and esports website with multiple UI styles, dual 3D elements, and dynamic animation combos.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/futuristic-ui.md",
+              "ui/dark-ui.md",
+              "ui/gradient-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/vaporwave-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/animated-cards.md",
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/text-animations.md",
+              "animations/page-transitions.md",
+              "animations/particle-effects.md",
+              "animations/cursor-effects.md",
+              "animations/stagger-animations.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-hero.md",
+            "3d/3d-background.md",
+            "3d/3d-particles.md"
+          ]
+        },
+        {
+          "pick_one": [
+            "3d/3d-card.md",
+            "3d/3d-text.md",
+            "3d/3d-morphing.md"
+          ]
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 22,
+        "tags": [
+          "gaming",
+          "esports",
+          "randomized",
+          "3d"
+        ]
+      }
+    },
+    "healthcare-website": {
+      "name": "healthcare-website",
+      "description": "A clean, trustworthy healthcare website with multiple calming UI styles, accessible design, and smooth, reassuring animations.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/minimal-ui.md",
+              "ui/modern-ui.md",
+              "ui/organic-ui.md",
+              "ui/claymorphism-ui.md",
+              "ui/neumorphism-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/hover-effects.md",
+              "animations/animated-buttons.md",
+              "animations/loading-animations.md",
+              "animations/text-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "beginner",
+        "estimated_components": 16,
+        "tags": [
+          "healthcare",
+          "medical",
+          "hospital",
+          "doctor",
+          "clinic",
+          "health",
+          "wellness",
+          "appointment",
+          "patient"
+        ]
+      }
+    },
+    "music-platform": {
+      "name": "music-platform",
+      "description": "A sleek music streaming platform with multiple UI styles, immersive audio-driven visuals, and atmospheric 3D elements.",
+      "category": "specialized",
+      "prompts": [
+        "layouts/music-layout.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/dark-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/aurora-ui.md",
+              "ui/gradient-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/vaporwave-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/cursor-effects.md",
+              "animations/particle-effects.md",
+              "animations/morphing-animations.md",
+              "animations/liquid-animations.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-particles.md",
+            "3d/3d-background.md"
+          ]
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 30,
+        "tags": [
+          "music",
+          "streaming",
+          "player",
+          "audio",
+          "playlist",
+          "album",
+          "artist",
+          "spotify",
+          "sound"
+        ]
+      }
+    },
+    "news-magazine": {
+      "name": "news-magazine",
+      "description": "A content-rich news and magazine publication with multiple editorial UI styles, rich typography animations, and smooth reading experience.",
+      "category": "specialized",
+      "prompts": [
+        "layouts/magazine-layout.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/minimal-ui.md",
+              "ui/modern-ui.md",
+              "ui/dark-ui.md",
+              "ui/retro-ui.md",
+              "ui/art-deco-ui.md",
+              "ui/organic-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/stagger-animations.md",
+              "animations/text-animations.md",
+              "animations/hover-effects.md",
+              "animations/loading-animations.md",
+              "animations/page-transitions.md",
+              "animations/microinteractions.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 22,
+        "tags": [
+          "news",
+          "magazine",
+          "publication",
+          "editorial",
+          "article",
+          "blog",
+          "journalism",
+          "media",
+          "content"
+        ]
+      }
+    },
+    "nft-marketplace": {
+      "name": "nft-marketplace",
+      "description": "A cutting-edge NFT marketplace with multiple UI styles, rich animations, and 3D elements for an immersive Web3 experience.",
+      "category": "ecommerce",
+      "prompts": [
+        "layouts/ecommerce-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/glassmorphism-ui.md",
+              "ui/dark-ui.md",
+              "ui/futuristic-ui.md",
+              "ui/gradient-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/aurora-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/hover-effects.md",
+              "animations/animated-cards.md",
+              "animations/scroll-animations.md",
+              "animations/loading-animations.md",
+              "animations/animated-buttons.md",
+              "animations/particle-effects.md",
+              "animations/cursor-effects.md",
+              "animations/stagger-animations.md",
+              "animations/morphing-animations.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-card.md",
+            "3d/3d-background.md",
+            "3d/3d-text.md",
+            "3d/3d-particles.md"
+          ]
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 24,
+        "tags": [
+          "nft",
+          "marketplace",
+          "web3",
+          "randomized",
+          "3d"
+        ]
+      }
+    },
+    "photography-portfolio": {
+      "name": "photography-portfolio",
+      "description": "A photography portfolio with multiple UI styles and varied animation pairings for a unique visual showcase.",
+      "category": "portfolio",
+      "prompts": [
+        "layouts/gallery-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/dark-ui.md",
+              "ui/minimal-ui.md",
+              "ui/brutalist-ui.md",
+              "ui/organic-ui.md",
+              "ui/art-deco-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/hover-effects.md",
+              "animations/page-transitions.md",
+              "animations/scroll-animations.md",
+              "animations/text-animations.md",
+              "animations/stagger-animations.md",
+              "animations/cursor-effects.md",
+              "animations/liquid-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 14,
+        "tags": [
+          "photography",
+          "portfolio",
+          "gallery",
+          "randomized"
+        ]
+      }
+    },
+    "product-launch": {
+      "name": "product-launch",
+      "description": "A high-impact product launch page with multiple UI styles, rich animations, and 3D elements for maximum visual impact.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/gradient-ui.md",
+              "ui/modern-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/futuristic-ui.md",
+              "ui/cyberpunk-ui.md",
+              "ui/aurora-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/animated-buttons.md",
+              "animations/hover-effects.md",
+              "animations/text-animations.md",
+              "animations/page-transitions.md",
+              "animations/particle-effects.md",
+              "animations/cursor-effects.md",
+              "animations/stagger-animations.md",
+              "animations/morphing-animations.md"
+            ]
+          }
+        },
+        {
+          "pick_one": [
+            "3d/3d-product-viewer.md",
+            "3d/3d-hero.md",
+            "3d/3d-card.md",
+            "3d/3d-morphing.md"
+          ]
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 20,
+        "tags": [
+          "product-launch",
+          "randomized",
+          "3d"
+        ]
+      }
+    },
+    "real-estate": {
+      "name": "real-estate",
+      "description": "A modern real estate listing website with multiple UI styles, interactive animations, and an immersive 3D globe for location exploration.",
+      "category": "specialized",
+      "prompts": [
+        "layouts/real-estate-layout.md",
+        "3d/3d-globe.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/minimal-ui.md",
+              "ui/organic-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/claymorphism-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/animated-cards.md",
+              "animations/loading-animations.md",
+              "animations/cursor-effects.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 25,
+        "tags": [
+          "real-estate",
+          "property",
+          "listing",
+          "house",
+          "apartment",
+          "map",
+          "agent",
+          "mortgage",
+          "home"
+        ]
+      }
+    },
+    "restaurant-website": {
+      "name": "restaurant-website",
+      "description": "An elegant restaurant website with multiple UI styles, extra layout options, and varied animations for a warm, appetizing experience.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_one": [
+            "layouts/gallery-layout.md",
+            "layouts/bento-grid-layout.md"
+          ]
+        },
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/neumorphism-ui.md",
+              "ui/modern-ui.md",
+              "ui/minimal-ui.md",
+              "ui/retro-ui.md",
+              "ui/organic-ui.md",
+              "ui/art-deco-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/animated-cards.md",
+              "animations/loading-animations.md",
+              "animations/stagger-animations.md",
+              "animations/microinteractions.md",
+              "animations/text-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 16,
+        "tags": [
+          "restaurant",
+          "food",
+          "randomized"
+        ]
+      }
+    },
+    "saas-landing": {
+      "name": "saas-landing",
+      "description": "A polished SaaS marketing page with multiple UI styles and rich animation combinations for high-converting landing pages.",
+      "category": "marketing",
+      "prompts": [
+        "layouts/saas-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/minimal-ui.md",
+              "ui/gradient-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/claymorphism-ui.md",
+              "ui/aurora-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/animated-buttons.md",
+              "animations/hover-effects.md",
+              "animations/text-animations.md",
+              "animations/loading-animations.md",
+              "animations/stagger-animations.md",
+              "animations/microinteractions.md",
+              "animations/cursor-effects.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 18,
+        "tags": [
+          "saas",
+          "marketing",
+          "randomized"
+        ]
+      }
+    },
+    "social-media-app": {
+      "name": "social-media-app",
+      "description": "A feature-rich social media application with multiple UI styles, real-time feeds, and immersive animations for an engaging experience.",
+      "category": "specialized",
+      "prompts": [
+        "layouts/social-feed-layout.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/aurora-ui.md",
+              "ui/gradient-ui.md",
+              "ui/minimal-ui.md",
+              "ui/claymorphism-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 4,
+            "from": [
+              "animations/microinteractions.md",
+              "animations/stagger-animations.md",
+              "animations/scroll-animations.md",
+              "animations/cursor-effects.md",
+              "animations/liquid-animations.md",
+              "animations/morphing-animations.md",
+              "animations/particle-effects.md",
+              "animations/hover-effects.md",
+              "animations/loading-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 35,
+        "tags": [
+          "social",
+          "media",
+          "feed",
+          "post",
+          "profile",
+          "network",
+          "community",
+          "chat",
+          "stories"
+        ]
+      }
+    },
+    "startup-landing": {
+      "name": "startup-landing",
+      "description": "A modern startup landing page with multiple UI styles and rich animations for varied, high-impact results every generation.",
+      "category": "landing",
+      "prompts": [
+        "layouts/landing-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_one": [
+            "layouts/bento-grid-layout.md",
+            "layouts/saas-layout.md"
+          ]
+        },
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/minimal-ui.md",
+              "ui/gradient-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/aurora-ui.md",
+              "ui/claymorphism-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/animated-buttons.md",
+              "animations/text-animations.md",
+              "animations/page-transitions.md",
+              "animations/stagger-animations.md",
+              "animations/microinteractions.md",
+              "animations/cursor-effects.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "intermediate",
+        "estimated_components": 15,
+        "tags": [
+          "startup",
+          "landing-page",
+          "randomized",
+          "bento-grid",
+          "scroll-animations"
+        ]
+      }
+    },
+    "tech-blog": {
+      "name": "tech-blog",
+      "description": "A modern technology blog with multiple UI styles and varied animations for a refined, engaging reading experience.",
+      "category": "landing",
+      "prompts": [
+        "layouts/blog-layout.md",
+        "layouts/routing.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/minimal-ui.md",
+              "ui/modern-ui.md",
+              "ui/dark-ui.md",
+              "ui/retro-ui.md",
+              "ui/organic-ui.md",
+              "ui/brutalist-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/text-animations.md",
+              "animations/page-transitions.md",
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/stagger-animations.md",
+              "animations/loading-animations.md",
+              "animations/microinteractions.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": false
+      },
+      "metadata": {
+        "difficulty": "beginner",
+        "estimated_components": 14,
+        "tags": [
+          "blog",
+          "technology",
+          "randomized"
+        ]
+      }
+    },
+    "travel-booking": {
+      "name": "travel-booking",
+      "description": "A stunning travel and booking website with multiple dreamy UI styles, rich animations, and an interactive 3D globe.",
+      "category": "specialized",
+      "prompts": [
+        {
+          "pick_one": [
+            "layouts/landing-layout.md",
+            "layouts/gallery-layout.md"
+          ]
+        },
+        "3d/3d-globe.md",
+        {
+          "pick_n": {
+            "count": 2,
+            "from": [
+              "ui/modern-ui.md",
+              "ui/glassmorphism-ui.md",
+              "ui/gradient-ui.md",
+              "ui/aurora-ui.md",
+              "ui/organic-ui.md",
+              "ui/minimal-ui.md"
+            ]
+          }
+        },
+        {
+          "pick_n": {
+            "count": 3,
+            "from": [
+              "animations/scroll-animations.md",
+              "animations/hover-effects.md",
+              "animations/stagger-animations.md",
+              "animations/page-transitions.md",
+              "animations/cursor-effects.md",
+              "animations/particle-effects.md",
+              "animations/liquid-animations.md",
+              "animations/text-animations.md"
+            ]
+          }
+        }
+      ],
+      "settings": {
+        "primary_framework": "Next.js",
+        "css_framework": "Tailwind CSS",
+        "animations": true,
+        "3d_elements": true
+      },
+      "metadata": {
+        "difficulty": "advanced",
+        "estimated_components": 28,
+        "tags": [
+          "travel",
+          "booking",
+          "hotel",
+          "flight",
+          "vacation",
+          "trip",
+          "destination",
+          "tourism",
+          "explore"
+        ]
+      }
+    }
+  }
+}

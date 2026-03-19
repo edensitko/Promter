@@ -1,0 +1,54 @@
+name: crypto-dashboard
+description: A cryptocurrency trading dashboard with multiple dark UI themes, 3D elements, and dynamic animation combinations.
+category: dashboard
+
+prompts:
+  # Core layout — always included
+  - layouts/dashboard-layout.md
+  - layouts/routing.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/dark-ui.md
+        - ui/futuristic-ui.md
+        - ui/glassmorphism-ui.md
+        - ui/cyberpunk-ui.md
+        - ui/gradient-ui.md
+
+  # 3D elements — randomly pick one
+  - pick_one:
+      - 3d/3d-card.md
+      - 3d/3d-dashboard.md
+      - 3d/3d-background.md
+      - 3d/3d-globe.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/animated-cards.md
+        - animations/hover-effects.md
+        - animations/loading-animations.md
+        - animations/scroll-animations.md
+        - animations/microinteractions.md
+        - animations/stagger-animations.md
+        - animations/morphing-animations.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: true
+
+metadata:
+  difficulty: advanced
+  estimated_components: 25
+  tags:
+    - crypto
+    - trading
+    - dashboard
+    - randomized
+    - 3d
+    - real-time

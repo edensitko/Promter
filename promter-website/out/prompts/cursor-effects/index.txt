@@ -1,0 +1,147 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","cursor-effects",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","cursor-effects","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","cursor-effects","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T23e3,# Cursor Effects Prompt
+
+## Role
+
+You are a senior frontend developer and interaction design specialist with deep expertise in pointer-based animations, custom cursor implementations, and GPU-accelerated motion. You craft cursor experiences that feel magical and responsive, transforming the default pointer into an expressive extension of the user's intent.
+
+## Task
+
+Design and implement a comprehensive system of custom cursor and pointer interaction effects. The system should replace or augment the default cursor with animated, context-aware visuals that respond to element types, user actions, and page content. Every effect must be performant, non-intrusive, and gracefully disabled on touch devices.
+
+## Animation Goals
+
+- Create cursor effects that feel fluid, responsive, and tightly coupled to pointer movement (sub-frame latency)
+- Use only GPU-accelerated properties (`transform`, `opacity`) for all cursor motion
+- Provide contextual cursor states that communicate affordance (clickable, draggable, viewable)
+- Ensure zero interference with native pointer events and element interactivity
+- Fall back gracefully on touch devices by hiding custom cursors entirely
+- Maintain 60fps at all times, even with multiple concurrent effects
+
+## Animation Catalog
+
+### Custom Cursor
+
+#### Dot + Ring Cursor
+Replace the default cursor with two elements: a small filled dot (6-8px) centered on the pointer, and a larger ring (36-48px) that follows with a slight delay using spring physics. The dot tracks the pointer exactly via `transform: translate3d()` updated on every `pointermove` event. The ring uses linear interpolation (lerp) with a factor of `0.15` per frame, creating a smooth trailing effect. On click, the ring contracts to 75% scale with `transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94)` then springs back. Both elements use `position: fixed`, `pointer-events: none`, `z-index: 9999`, and `will-change: transform`.
+
+### Cursor Trail
+
+#### Particle Trail
+Render a trail of 8-15 small elements (circles, 4-6px) that follow the cursor path and fade out over 400-600ms. Each particle is created at the cursor position on `pointermove`, then animates `opacity` from 1 to 0 and `transform: scale()` from 1 to 0.3. Use an object pool of pre-created DOM elements (or a single Canvas layer) to avoid garbage collection. Particles should have slight random offset (+-3px) and optional color variation. Throttle creation to every 20-30ms to avoid excess particles.
+
+#### Gradient Trail
+A soft gradient smear that follows the cursor using a Canvas element layered behind content. On each frame, draw a radial gradient at the current cursor position with low opacity (0.05-0.1), and apply a global fade using `globalCompositeOperation: 'destination-out'` with a semi-transparent fill. Creates a glowing trail that dissipates naturally.
+
+### Magnetic Elements
+
+#### Magnetic Pull
+Buttons, links, and interactive elements subtly pull toward the cursor when it enters a 100px proximity radius. Calculate the distance between cursor and element center; when within threshold, apply `transform: translate3d(dx * 0.3, dy * 0.3, 0)` where `dx`/`dy` are the offset vectors scaled by a magnetism factor (0.2-0.4). Use lerp-based animation to smooth the movement. On mouse leave, spring back to origin with `transition: transform 400ms cubic-bezier(0.25, 0.1, 0.25, 1)`. Attach via a `data-magnetic` attribute for easy opt-in.
+
+### Cursor Spotlight
+
+#### Radial Light
+A large radial gradient (200-400px diameter) follows the cursor, creating a spotlight effect that illuminates content beneath. Implement as a `div` with `background: radial-gradient(circle 200px, rgba(255,255,255,0.08) 0%, transparent 100%)`, `position: fixed`, `pointer-events: none`, and `mix-blend-mode: soft-light` or `overlay`. Position is updated via `transform: translate3d()` using lerp (factor 0.1) for smooth following. Works especially well on dark backgrounds. Adjust gradient intensity based on proximity to interactive elements.
+
+### Cursor Text
+
+#### Contextual Label
+A small text label (12-14px, uppercase, letter-spacing 0.05em) orbits or follows the cursor at a fixed offset (15-20px right, 15-20px below). The text changes based on the element beneath the cursor: "View" over images and portfolio items, "Drag" over draggable elements, "Click" over buttons and CTAs, "Scroll" over scrollable containers. Use `data-cursor-text` attributes on target elements. The label fades in with `opacity` transition (200ms) and scales from 0.8 to 1.0 when a new context is detected. Hide when over non-annotated elements.
+
+### Cursor Morph
+
+#### Shape Shifting Cursor
+The custom cursor (dot + ring style) morphs its shape and size based on the element being hovered. Default: small dot (8px). Over links: ring expands to 50px and dot disappears. Over images: cursor becomes a rounded square (40x40px) with subtle border. Over buttons: ring pulses gently with `animation: pulse 1.5s ease-in-out infinite`. Over text: cursor becomes a vertical bar (2x24px). Transitions between states use `transition: width 300ms, height 300ms, border-radius 300ms` with `cubic-bezier(0.25, 0.1, 0.25, 1)`. Detect element type via `pointermove` event target analysis.
+
+### Interactive Hover Ripple
+
+#### Surface Ripple
+When the cursor hovers over designated surface elements (cards, panels, sections), a ripple emanates from the cursor position outward. Implement as a pseudo-element or dynamically created `div` at the `event.offsetX`/`event.offsetY` position. The ripple scales from 0 to cover the element using `transform: scale()` with `opacity` fading from 0.15 to 0. Duration 600-800ms with `cubic-bezier(0.4, 0, 0.2, 1)`. Clip the ripple to the element bounds with `overflow: hidden` on the parent. Trigger on `pointerenter` for single ripple or throttled on `pointermove` for continuous ripples. Use Material Design ripple math: `Math.hypot(width, height)` for max scale.
+
+## Technical Requirements
+
+- Use `requestAnimationFrame` for all cursor position updates — never update in the event handler directly
+- Apply linear interpolation: `current += (target - current) * lerpFactor` each frame for smooth following
+- All moving elements must use `transform: translate3d()` (triggering GPU compositing)
+- Set `pointer-events: none` on all cursor overlay elements to prevent event interference
+- Use `will-change: transform` on cursor elements (remove when inactive to free GPU memory)
+- Debounce `pointermove` handlers for particle creation; never debounce core cursor position
+- Detect touch devices via `window.matchMedia('(hover: hover) and (pointer: fine)')` and disable custom cursor entirely on touch
+- Hide the native cursor with `cursor: none` on `<body>` only when custom cursor is active
+- Restore native cursor immediately if custom cursor JavaScript fails or is still loading
+- Clean up all event listeners and animation frames on component unmount or page navigation
+
+## Technology Suggestions
+
+- Vanilla JavaScript with `requestAnimationFrame` for core cursor tracking
+- CSS Custom Properties for cursor size, color, and animation speed theming
+- HTML5 Canvas for trail effects and particle systems
+- Framer Motion `useSpring` for spring-physics following in React contexts
+- GSAP for complex cursor morph timelines
+- Tailwind CSS for base styling and utility classes
+- `pointer-events: none` and `mix-blend-mode` for visual layering
+
+## Expected Output
+
+### Component Structure
+
+```
+components/
+  cursor/
+    CursorProvider.jsx
+    CustomCursor.jsx
+    CursorTrail.jsx
+    MagneticElement.jsx
+    CursorSpotlight.jsx
+    CursorText.jsx
+    CursorRipple.jsx
+  hooks/
+    useCursorPosition.js
+    useLerp.js
+    useMagnetic.js
+    useCursorContext.js
+  utils/
+    detectTouchDevice.js
+    objectPool.js
+```
+
+### Code Requirements
+
+- Wrap the entire system in a `<CursorProvider>` context that manages global cursor state
+- Each effect should be independently toggleable via props or configuration
+- Support cursor theme customization (colors, sizes, blend modes) through CSS custom properties
+- The `useCursorPosition` hook should expose raw and lerped positions at configurable smoothing factors
+- Magnetic elements opt in via a `<MagneticElement>` wrapper or `data-magnetic` attribute directive
+- Object pool pattern for particle trail to pre-allocate and reuse DOM nodes
+- Batch DOM reads and writes to avoid layout thrashing in `pointermove` handlers
+- Include TypeScript types for all props and configuration objects
+
+### Accessibility
+
+- Respect `prefers-reduced-motion`: disable all cursor animations and show the native cursor
+- Custom cursor must not obscure content or interactive targets
+- Ensure all interactive elements remain keyboard-focusable regardless of cursor effects
+- Magnetic pull must not move elements far enough to overlap neighbors or cause layout confusion
+- Cursor text labels must not be the sole indicator of element function — they are decorative only
+- Screen readers should not announce cursor effect elements (`aria-hidden="true"` on all cursor DOM)
+- Test with Windows High Contrast Mode: ensure custom cursor elements are visible or native cursor is restored
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/cursor-effects.md","category":"animations","name":"cursor-effects","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Cursor Effects Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Cursor Effects Prompt — Free Animation prompt module (9 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/cursor-effects/"}],["$","meta","9",{"property":"og:title","content":"Cursor Effects Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/cursor-effects/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

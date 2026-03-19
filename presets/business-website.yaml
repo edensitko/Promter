@@ -1,0 +1,44 @@
+name: business-website
+description: A clean and professional corporate website with multiple UI styles and varied animations for a polished look each generation.
+category: landing
+
+prompts:
+  # Core layout — always included
+  - layouts/landing-layout.md
+  - layouts/routing.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/modern-ui.md
+        - ui/minimal-ui.md
+        - ui/neumorphism-ui.md
+        - ui/organic-ui.md
+        - ui/claymorphism-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/page-transitions.md
+        - animations/scroll-animations.md
+        - animations/hover-effects.md
+        - animations/microinteractions.md
+        - animations/stagger-animations.md
+        - animations/animated-buttons.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: false
+
+metadata:
+  difficulty: beginner
+  estimated_components: 12
+  tags:
+    - corporate
+    - business
+    - professional
+    - randomized

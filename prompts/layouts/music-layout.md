@@ -1,0 +1,171 @@
+# Music Streaming Platform Layout Prompt
+
+## Role
+
+You are a senior frontend designer and layout architect specializing in music streaming interfaces and audio-centric digital experiences. You have deep expertise in persistent playback UI patterns, media-rich browsing layouts, playlist management, and the unique interaction design challenges of applications where a background process (audio playback) must remain accessible and controllable from every part of the interface. You understand how music listeners navigate: they browse visually through album art, rely on algorithmic and editorial recommendations, build personal libraries, and expect playback controls to be omnipresent yet unobtrusive. You design interfaces that feel immersive, responsive, and deeply connected to the music.
+
+## Task
+
+Design and build a complete, production-ready music streaming platform layout that enables users to discover music through curated recommendations and search, browse albums and artists, manage playlists and a personal library, and control audio playback from a persistent player bar. The layout must support a rich content browsing experience with album art as the primary visual element, a powerful search function, and a fully-featured audio player that persists across all navigation. Every design decision should serve the listening experience: the interface should feel like a natural extension of the music itself.
+
+## Layout Structure
+
+The music streaming platform is composed of the following structural elements, forming a persistent application shell:
+
+1. **Sticky Player Bar** -- A fixed bar anchored to the bottom of the viewport (height: 80px desktop, 64px mobile) that persists across all pages and navigation events. The player bar is the most critical UI element and must never unmount during client-side navigation. Structure (left to right on desktop): (a) Now-playing info section (width: 240px, left-aligned): album art thumbnail (56px x 56px, border-radius 6px, clickable to navigate to album page), track title (14px, semibold, single-line truncate with marquee animation if text overflows after 3 seconds, clickable to navigate to album), artist name (12px, muted, clickable to navigate to artist page), and a heart/like toggle button (16px icon, filled red when liked, with a scale bounce animation on toggle). (b) Playback controls section (centered, flex-1): a row of control buttons -- shuffle toggle (16px icon, accent color when active), previous track (20px icon), play/pause (44px circular button with filled background, accent color, play triangle or pause bars icon, hover: brightness increase), next track (20px icon), repeat toggle (16px icon, cycling through off, repeat-all, repeat-one with a "1" badge overlay). Below the controls: a progress bar (full width of the center section, height 4px, expanding to 6px on hover) showing elapsed time on the left (12px monospace), a seekable track with a draggable thumb (12px circle, visible on hover, accent color), buffered progress in a lighter tint, and total duration on the right (12px monospace). The progress bar must support click-to-seek and drag-to-seek, updating the time display in real-time during drag. (c) Auxiliary controls section (width: 240px, right-aligned): a volume control (speaker icon that toggles mute on click, with a horizontal slider 80px wide, height 4px expanding to 6px on hover, with a draggable thumb), a queue/now-playing button (list icon, opens the queue panel), a device/connect button (speaker/device icon), and a full-screen/mini-player toggle. The player bar has a top border (1px, 10% opacity) and a slightly elevated background (dark mode: hsl(0,0%,7%), light mode: hsl(0,0%,97%)).
+
+2. **Left Sidebar Navigation** -- A fixed vertical panel (width: 280px desktop, full height minus player bar) on the left side. Structure: (a) top section with the platform logo and name (24px, font-weight 700), (b) primary navigation links (16px, padding 10px 16px, border-radius 8px) for: Home (house icon), Search (magnifying glass icon), Library (books/collection icon), each with an active state (filled icon, semibold text, subtle background tint), (c) a horizontal divider, (d) a "Create Playlist" button (14px, flex row with plus icon, muted text, hover background tint) and a "Liked Songs" link (14px, with a gradient heart icon and the count of liked songs), (e) another horizontal divider, (f) a scrollable list of user playlists (14px each, single-line truncate, muted text, hover highlight, right-click context menu for rename/delete/share). The sidebar has a resize handle on its right edge allowing the user to drag-resize between 200px and 400px. The playlists section shows a subtle scrollbar and supports drag-and-drop reordering. Below the playlist list, a "Recently Played" section shows the last 5 played items as small rows (tiny album art 32px + title, 13px).
+
+3. **Main Content Area** -- The central scrollable region (fills remaining width between sidebar and any open panels, scrolls independently) where all browsable content renders. Content types include:
+
+   (a) **Home Page:** A hero banner at the top (height 320px, border-radius 12px, margin 24px, featuring a large artwork image, gradient overlay, album/playlist title (32px bold), artist or curator name, play button (48px circle, accent) and a secondary "Save" button). Below the hero, horizontal scroll rows for content sections: "Recently Played" (circular album/artist images, 180px, with title below, artist name, play button overlay on hover appearing as a green circle with white triangle at bottom-right of the image), "Made for You" (square cards 180px, playlist covers, title 14px semibold, description 12px muted 2-line clamp), "New Releases" (square cards, album art, album title, artist name), "Popular Artists" (circular images 180px, artist name centered below), "Browse by Mood" (wider cards 240px with gradient backgrounds and mood labels like "Chill," "Workout," "Focus," "Party"). Each row has a section title (24px semibold) with "Show All" link, and left/right scroll arrows (40px circular, semi-transparent, appear on hover at row edges). Cards have a play button overlay that appears on hover (translateY(-8px) entrance, accent circle with white play icon) allowing immediate playback without navigating to the item page.
+
+   (b) **Artist Page:** A large header section (height 400px) with the artist's photo as a background (object-fit cover, gradient overlay from transparent to base background), the artist's name in very large type (56px desktop, 36px mobile, font-weight 900), monthly listener count (16px, muted, e.g., "23,456,789 monthly listeners"), a "Follow" toggle button (outlined when unfollowed, filled when followed), and a large play button (56px circle). Below the header: "Popular" section showing the top 5 tracks in a numbered list (each row: rank number, album art 40px, track title, plays count right-aligned, duration right-aligned, hover reveals a heart button and options menu), "Discography" section with album cards in a horizontal scroll or grid (showing "Albums," "Singles," "Compilations" filter tabs, each card with cover art 180px, album name, year, type label), "Related Artists" horizontal scroll with circular artist images, and an "About" section with a brief biography, monthly listeners stat, and a large feature image.
+
+   (c) **Album/Playlist Page:** A header section with: album art (232px x 232px on desktop, border-radius 8px, box-shadow 0 8px 24px rgba(0,0,0,0.3)), content type label (12px uppercase, e.g., "Album" or "Playlist"), title (32px bold), artist/creator name (16px, linked), metadata line (year, track count, total duration, e.g., "2026 · 12 songs, 48 min"), description if playlist (14px, muted, 2-line clamp with expand). Below the header: a play button (56px circle) and a heart/save button, a three-dot options menu. Track list table with columns: # (track number), Title (track name + artist if compilation, 15px), Album (linked, hidden on playlists), Date Added (relative time, playlists only), Duration (right-aligned). Rows highlight on hover, double-click to play, right-click for context menu (add to playlist, go to artist, share). The currently playing track is highlighted with accent color text and a small animated equalizer icon replacing the track number.
+
+4. **Queue / Now Playing Panel** -- A panel (width: 360px) that slides in from the right edge of the viewport, overlaying or pushing the main content. Contains: (a) a "Now Playing" section at top showing the large album art (280px, border-radius 12px), track title (20px bold), artist name (16px, muted, linked), album name (14px, muted, linked), (b) a horizontal divider, (c) "Next in Queue" list showing upcoming tracks (each row: album art 40px, title, artist, drag handle for reorder, remove button on hover), (d) "Recently Played" list below the queue. The panel is toggleable via the queue button in the player bar and is dismissible via a close button or clicking outside.
+
+5. **Search** -- Accessible from the sidebar navigation or Cmd+K shortcut. Structure: (a) a large search input (24px placeholder text, autofocus, full-width in the main content area, border-radius 12px, height 48px) with real-time results appearing as the user types (debounced 200ms), (b) results grouped by category in sections: "Songs" (list format with album art, title, artist, album, duration), "Artists" (circular images, artist name, "Artist" label), "Albums" (square art, album name, artist, year), "Playlists" (square art, playlist name, creator). Each section shows top 4 results with a "See All" link expanding to a full results page. (c) When the search input is empty, display: recent searches (clearable), browsable genre/mood cards in a grid (large colorful cards with genre labels, e.g., "Hip-Hop," "Rock," "Classical," "Jazz," "Electronic").
+
+## Design Goals
+
+- Create an immersive, visually rich interface where album art and artist imagery drive the aesthetic, making the browsing experience feel like an extension of the listening experience.
+- Ensure the persistent player bar is always accessible without interfering with content browsing; the bar should feel lightweight yet fully functional.
+- Design for both lean-back browsing (discovery through recommendations) and lean-forward interaction (searching, managing playlists, building queues).
+- Use a dark theme as the primary or default mode, as music interfaces are frequently used in low-light environments; the dark theme should feel warm and sophisticated, not stark.
+- Maintain 60fps performance during all interactions: smooth scrolling through long playlists, fluid drag-and-drop in queue reordering, and responsive seek bar interaction during playback.
+- Minimize visual noise: use album art as the primary color source, with the interface chrome kept neutral and receding.
+
+## UI Requirements
+
+- The player bar seek bar must support precise seeking: click anywhere on the bar to jump to that position, drag the thumb for fine control, and display a tooltip showing the time at the cursor position during hover.
+- Album art throughout the application must use a consistent aspect ratio (1:1) with `object-fit: cover` and a muted background fallback color (extracted dominant color or neutral gray) shown during image loading.
+- All horizontal scroll rows must support: mouse wheel horizontal scrolling (via `overscroll-behavior-x: contain`), touch swipe, scroll-snap alignment to card edges, and programmatic arrow button navigation.
+- The "Currently Playing" track must be visually indicated wherever it appears in the UI (playlists, albums, search results) with accent-colored text and an animated equalizer icon.
+- Context menus (right-click on tracks, albums, playlists) must include: Add to Queue, Add to Playlist (with submenu of user playlists), Go to Artist, Go to Album, Share (copy link), and Remove (if in a user playlist).
+- Keyboard shortcuts: Space for play/pause, left/right arrows for seek (5s), up/down arrows for volume, N for next, P for previous, L for like, Q for toggle queue.
+- The play button overlay on cards must appear with a smooth entrance animation (fade + translate up) and trigger playback of that item on click without navigating away from the current page.
+- All time displays must format as M:SS for tracks under an hour and H:MM:SS for longer content.
+
+## Responsive Behavior
+
+- **Desktop (1280px and above):** Full three-panel layout: left sidebar (280px), main content (flexible), optional right queue panel (360px). Player bar at full width with all controls visible. Album art in headers at full size. Horizontal scroll rows show 5-6 cards.
+- **Tablet (768px to 1279px):** Left sidebar collapses to a narrow icon-only rail (72px) with labels shown on hover/focus as tooltips. Main content expands. Queue panel overlays rather than pushing content. Player bar simplifies auxiliary controls (hide device selector). Horizontal scroll rows show 3-4 cards. Album/playlist header art reduces to 180px.
+- **Mobile (below 768px):** Left sidebar transforms into a bottom tab navigation bar (height 56px) with 4-5 icon tabs (Home, Search, Library, Premium) positioned above the player bar. The player bar collapses to a mini-player (height: 56px) showing: album art (40px), track title (single-line truncate), play/pause button (36px), and a thin progress bar at the very top of the bar (2px height, no thumb, accent color). Tapping the mini-player expands it to a full-screen "Now Playing" view with large album art (width: 85vw, centered), track info, full playback controls, progress bar with seek, volume, queue access, and lyrics (if available). This full-screen view uses a gesture (swipe down) to collapse back to the mini-player. Horizontal scroll rows show 2.5 cards. All touch targets meet 44x44px minimum. Context menus become bottom sheet action menus.
+
+## Technology Suggestions
+
+- Next.js 14+ (App Router) with a persistent layout that preserves the player bar and sidebar across all route changes using the app router's nested layout architecture.
+- Tailwind CSS 3+ with `darkMode: 'class'` and a custom theme defining the platform's color scale, with CSS custom properties for dynamic accent colors derived from album art.
+- Zustand for global playback state management (current track, queue, playback status, volume, shuffle, repeat) accessible from all components.
+- Howler.js or the native Web Audio API for audio playback management with support for streaming, seeking, volume control, and media session API integration (OS-level playback controls and lock screen info).
+- color-thief or vibrant.js for extracting dominant colors from album art to dynamically tint backgrounds and gradients.
+- Framer Motion for the queue panel slide animation, card hover play button entrance, mini-player to full-screen expansion on mobile, and equalizer animation.
+- dnd-kit for drag-and-drop queue reordering and playlist track ordering.
+- Radix UI or Shadcn/UI for accessible primitives: slider (volume, seek), context-menu (track actions), dialog (full-screen player on mobile), tooltip (controls), dropdown-menu.
+
+## Expected Output
+
+### Component Structure
+
+```
+MusicApp/
+  Layout/
+    AppLayout.tsx
+    Sidebar/
+      Sidebar.tsx
+      NavItem.tsx
+      PlaylistList.tsx
+      RecentlyPlayedList.tsx
+      SidebarResizeHandle.tsx
+    PlayerBar/
+      PlayerBar.tsx
+      NowPlayingInfo.tsx
+      PlaybackControls.tsx
+      ProgressBar.tsx
+      VolumeControl.tsx
+      AuxControls.tsx
+      MiniPlayer.tsx
+      FullScreenPlayer.tsx
+    QueuePanel/
+      QueuePanel.tsx
+      QueueTrackItem.tsx
+      NowPlayingLarge.tsx
+    MobileTabBar.tsx
+  Home/
+    HomePage.tsx
+    HeroBanner.tsx
+    ContentRow/
+      ContentRow.tsx
+      ScrollArrows.tsx
+      AlbumCard.tsx
+      ArtistCircle.tsx
+      PlaylistCard.tsx
+      MoodCard.tsx
+      PlayButtonOverlay.tsx
+  Search/
+    SearchPage.tsx
+    SearchInput.tsx
+    SearchResults/
+      SearchResults.tsx
+      SongResult.tsx
+      ArtistResult.tsx
+      AlbumResult.tsx
+      PlaylistResult.tsx
+    GenreBrowseGrid.tsx
+    RecentSearches.tsx
+  Artist/
+    ArtistPage.tsx
+    ArtistHeader.tsx
+    PopularTracks.tsx
+    Discography/
+      DiscographySection.tsx
+      DiscographyFilter.tsx
+      AlbumCard.tsx
+    RelatedArtists.tsx
+    ArtistAbout.tsx
+  Album/
+    AlbumPlaylistPage.tsx
+    AlbumHeader.tsx
+    TrackList/
+      TrackList.tsx
+      TrackRow.tsx
+      EqualizerIcon.tsx
+    ContextMenu.tsx
+  Library/
+    LibraryPage.tsx
+    LibraryFilter.tsx
+    LibraryGrid.tsx
+  Shared/
+    AlbumArt.tsx
+    ArtistAvatar.tsx
+    LikeButton.tsx
+    TrackDuration.tsx
+    Badge.tsx
+    Toast.tsx
+    Skeleton.tsx
+```
+
+### Page Sections
+
+1. Sticky Player Bar -- persistent bottom bar with now-playing info, playback controls, progress bar, volume, queue toggle
+2. Left Sidebar Navigation -- home/search/library nav, create playlist, playlist list, recently played
+3. Home Page -- hero banner, horizontal scroll rows (recently played, recommendations, new releases, artists, moods)
+4. Artist Page -- large header with photo, popular tracks, discography, related artists, about
+5. Album/Playlist Page -- header with art and metadata, track list table with playback integration
+6. Queue Panel -- slide-in right panel with now playing, upcoming tracks, recently played
+7. Search -- large input with real-time grouped results, genre/mood browse grid
+
+### Code Requirements
+
+- Use TypeScript with strict mode for all components; define interfaces for Track, Album, Artist, Playlist, QueueItem, PlaybackState, and SearchResult types.
+- The player bar and playback state must persist across all route navigations using Next.js App Router's nested layout architecture; the audio element must live in the root layout and never unmount.
+- Implement the playback state store (Zustand) with actions for: play, pause, next, previous, seek, setVolume, toggleShuffle, toggleRepeat, addToQueue, removeFromQueue, reorderQueue, like/unlike.
+- Media Session API integration must update the OS-level now-playing information (title, artist, album, artwork) and respond to hardware media key events (play/pause, next, previous).
+- The progress bar seek interaction must use pointer events (pointerdown, pointermove, pointerup) rather than click events, to support both mouse and touch seeking with preview during drag.
+- Album art dominant color extraction should run asynchronously and cache results, applying the extracted color as a CSS custom property (e.g., `--accent-album`) used for background gradients on album/artist pages.
+- All time formatting must use a shared utility function that handles both M:SS and H:MM:SS formats, with zero-padded seconds.
+- Provide a sample data file (`music-data.ts`) with at least 3 artists, 5 albums, 30 tracks, and 3 playlists with realistic metadata to demonstrate the full browsing, search, and playback experience.
+- Keep individual component files under 150 lines; extract hooks (`usePlayback`, `useQueue`, `useColorExtraction`, `useKeyboardShortcuts`, `useMediaSession`) into a dedicated `hooks/` directory.
+- Ensure zero ESLint warnings and pass automated accessibility audit with attention to the audio player controls (proper aria-labels for play/pause state, volume slider, seek slider with aria-valuemin/max/now).

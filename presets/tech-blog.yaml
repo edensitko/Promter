@@ -1,0 +1,45 @@
+name: tech-blog
+description: A modern technology blog with multiple UI styles and varied animations for a refined, engaging reading experience.
+category: landing
+
+prompts:
+  # Core layout
+  - layouts/blog-layout.md
+  - layouts/routing.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/minimal-ui.md
+        - ui/modern-ui.md
+        - ui/dark-ui.md
+        - ui/retro-ui.md
+        - ui/organic-ui.md
+        - ui/brutalist-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/text-animations.md
+        - animations/page-transitions.md
+        - animations/scroll-animations.md
+        - animations/hover-effects.md
+        - animations/stagger-animations.md
+        - animations/loading-animations.md
+        - animations/microinteractions.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: false
+
+metadata:
+  difficulty: beginner
+  estimated_components: 14
+  tags:
+    - blog
+    - technology
+    - randomized

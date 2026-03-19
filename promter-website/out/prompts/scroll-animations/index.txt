@@ -1,0 +1,141 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","scroll-animations",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","scroll-animations","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","scroll-animations","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T14eb,# Scroll Animations Prompt
+
+## Role
+
+You are a senior frontend designer and motion design specialist with expertise in scroll-driven animations and parallax effects. You create scroll experiences that guide users through content with purposeful, performant motion.
+
+## Task
+
+Design and implement a comprehensive system of scroll-triggered animations including entrance reveals, parallax layers, progress indicators, and scroll-linked transformations. The system should be modular, performant, and easy to apply across any page layout.
+
+## Animation Goals
+
+- Create scroll animations that enhance storytelling and content hierarchy
+- Ensure buttery-smooth 60fps performance even on mid-range devices
+- Use the Intersection Observer API for efficient scroll detection
+- Provide progressive enhancement — content is fully readable without animations
+- Support both vertical and horizontal scroll contexts
+
+## Animation Catalog
+
+### Entrance Animations
+
+#### Fade Up
+Elements fade in while translating upward (20–40px). The most common and versatile scroll animation. Apply to text blocks, cards, and section content. Stagger siblings by 100–150ms for sequential reveals.
+
+#### Slide In
+Elements slide in from left, right, or bottom with a fade. Use for feature sections, alternating content blocks, and image-text pairs. Direction should follow reading flow.
+
+#### Scale Reveal
+Elements scale from 0.9 to 1.0 while fading in. Creates a subtle zoom effect. Best for hero images, key statistics, and focal-point content.
+
+#### Clip Reveal
+Content is revealed through an animated `clip-path` — a rectangle that expands, a circle that grows, or a polygon that morphs. High-impact effect for hero sections and featured media.
+
+### Parallax Effects
+
+#### Layer Parallax
+Multiple layers move at different speeds relative to scroll position, creating depth. Background moves slowest, midground at medium speed, foreground fastest. Use for hero sections and storytelling pages.
+
+#### Element Parallax
+Individual elements translate at different rates on scroll. Images, shapes, and decorative elements drift at varied speeds. Creates a floating, dynamic feel without full parallax layers.
+
+#### Text Parallax
+Headline text moves at a different rate than body text or surrounding elements. Creates visual hierarchy through motion. Effective for section transitions.
+
+### Progress Animations
+
+#### Scroll Progress Bar
+A horizontal bar at the top of the viewport fills based on page scroll percentage. Use `scroll()` timeline or JavaScript scroll listener with `requestAnimationFrame`.
+
+#### Section Progress
+Individual sections show completion progress — a vertical line that fills, dots that activate, or a step indicator. Helps users understand their position in long-form content.
+
+#### Counter Animation
+Numbers count up from zero to their target value as they scroll into view. Use for statistics, metrics, and achievement sections. Apply easing for natural deceleration.
+
+### Scroll-Linked Transformations
+
+#### Pin and Transform
+Elements pin in place while scroll drives transformations — rotation, scale, color change, or content swap. Creates an interactive, app-like feel.
+
+#### Horizontal Scroll Section
+Vertical scroll drives horizontal movement of a content panel. Used for timelines, process flows, and portfolio showcases. Requires careful scroll-hijacking UX.
+
+#### Morph on Scroll
+Elements smoothly morph between states as the user scrolls — a circle becomes a rectangle, a logo transforms, or layout shifts between configurations.
+
+## Technical Requirements
+
+- Use Intersection Observer API for triggering (not scroll event listeners)
+- Use CSS `scroll-timeline` or `animation-timeline: scroll()` where browser support allows
+- Fallback to `requestAnimationFrame`-based scroll listeners with throttling
+- All animated properties must be compositor-friendly (transform, opacity)
+- Animations must not block the main thread
+- Support `prefers-reduced-motion` by disabling parallax and reducing entrance animations to simple fades
+- Lazy-load heavy assets triggered by scroll proximity
+
+## Technology Suggestions
+
+- Intersection Observer API (native)
+- CSS Scroll-Driven Animations (progressive enhancement)
+- Framer Motion with `useScroll` and `useTransform`
+- GSAP ScrollTrigger
+- Lenis for smooth scroll behavior
+- Tailwind CSS for base styling
+
+## Expected Output
+
+### Component Structure
+
+```
+components/
+  scroll/
+    ScrollReveal.jsx
+    ParallaxLayer.jsx
+    ScrollProgress.jsx
+    CounterAnimation.jsx
+    PinSection.jsx
+    HorizontalScroll.jsx
+  hooks/
+    useScrollProgress.js
+    useInView.js
+    useParallax.js
+```
+
+### Code Requirements
+
+- Each animation should be a composable component or hook
+- Support configuration via props: direction, delay, duration, threshold, offset
+- Include a `<ScrollReveal>` wrapper component for the most common entrance animations
+- Provide both CSS-only and JavaScript-enhanced versions where possible
+- Handle cleanup of observers and listeners on unmount
+
+### Accessibility
+
+- Respect `prefers-reduced-motion` media query globally
+- Ensure all content is visible and readable without JavaScript
+- Scroll-hijacking sections must still allow keyboard navigation
+- Provide skip links for long scroll-driven sections
+- Counter animations should show final values immediately for screen readers
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/scroll-animations.md","category":"animations","name":"scroll-animations","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Scroll Animations Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Scroll Animations Prompt — Free Animation prompt module (5.2 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/scroll-animations/"}],["$","meta","9",{"property":"og:title","content":"Scroll Animations Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/scroll-animations/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

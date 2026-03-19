@@ -1,0 +1,147 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","page-transitions",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","page-transitions","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","page-transitions","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T191d,# Page Transitions Prompt
+
+## Role
+
+You are a senior frontend designer and motion architect specializing in page-level transitions and route animations. You create seamless navigation experiences that maintain spatial context and make single-page applications feel like polished native apps.
+
+## Task
+
+Design and implement a comprehensive page transition system for single-page applications. The system should handle route changes with smooth, purposeful animations that maintain user orientation, reinforce navigation hierarchy, and create a premium application feel.
+
+## Animation Goals
+
+- Create transitions that maintain spatial awareness — users should understand where they came from and where they are going
+- Keep transition durations between 300–500ms to feel smooth without being slow
+- Ensure content is never invisible for more than a frame — crossfade or overlap pages
+- Support both forward and backward navigation with directional awareness
+- Maintain scroll position expectations (new page starts at top, back navigation restores position)
+
+## Transition Catalog
+
+### Crossfade
+The simplest and most versatile transition. Outgoing page fades out while incoming page fades in simultaneously. Duration: 300ms. Use `opacity` transitions with overlapping timing. Best as a default fallback transition.
+
+### Slide
+Pages slide horizontally (left/right) or vertically (up/down) based on navigation direction. Forward navigation slides content left (new page enters from right), back navigation reverses. Use `transform: translateX()` with both pages animated simultaneously. Include slight opacity fade for polish.
+
+### Scale and Fade
+Outgoing page scales down slightly (0.95) and fades out. Incoming page scales up from 1.05 to 1.0 and fades in. Creates a zoom-like depth effect. Best for hierarchical navigation (list → detail views).
+
+### Shared Element Transition
+An element (image, card, header) shared between pages morphs smoothly from its position on the outgoing page to its position on the incoming page. Other content fades around it. Use the View Transitions API or FLIP technique. The most complex but most impressive transition.
+
+### Clip Path Reveal
+Incoming page is revealed through an expanding clip-path shape — a circle expanding from the click point, a rectangle expanding from center, or a custom shape. Outgoing page remains visible beneath until covered. Use `clip-path: circle()` or `clip-path: inset()` with transitions.
+
+### Staggered Content
+Instead of transitioning the entire page, individual content blocks exit and enter with staggered timing. Outgoing elements slide out in sequence, then incoming elements slide in. Creates a sophisticated, editorial feel. Use staggered delays on child elements.
+
+### Cover / Uncover
+A solid color panel (matching brand color) slides in to cover the outgoing page, pauses briefly, then slides away to reveal the incoming page. Simple but effective. Two pseudo-element animations with a deliberate timing gap.
+
+### Morph Transition
+The page layout morphs between states — sidebar expands, content area reshapes, navigation reorganizes. Elements that exist on both pages smoothly interpolate between positions. Use layout animations or FLIP. Best for dashboard-style apps with persistent navigation.
+
+## Implementation Architecture
+
+### Transition Controller
+A central component that wraps the router and manages transition state. It should:
+- Detect route changes and determine transition type based on route metadata
+- Manage the lifecycle: prepare → animate-out → swap → animate-in → cleanup
+- Handle interruptions (rapid navigation during transition)
+- Coordinate with data fetching (wait for data before animating in)
+
+### Route Metadata
+Each route can specify its preferred transition:
+```jsx
+const routes = [
+  { path: '/', element: <Home />, transition: 'fade' },
+  { path: '/about', element: <About />, transition: 'slide' },
+  { path: '/project/:id', element: <Project />, transition: 'shared-element' },
+];
+```
+
+### Direction Detection
+Automatically determine forward/backward direction by comparing route depth or maintaining a navigation stack. Forward uses normal direction, backward reverses the animation.
+
+## Technical Requirements
+
+- Use the View Transitions API where supported, with JavaScript fallbacks
+- Transitions must not block interaction — navigation should feel instant even if animation is playing
+- Handle rapid navigation gracefully (skip/fast-forward interrupted transitions)
+- Support `prefers-reduced-motion` by falling back to instant crossfade (200ms max)
+- Manage z-index stacking correctly (incoming page above outgoing for slides)
+- Prevent scroll position leaking between pages during transition
+- Memory management: ensure outgoing page components unmount after transition
+
+## Technology Suggestions
+
+- View Transitions API (native, progressive enhancement)
+- Framer Motion `AnimatePresence` for React
+- React Router or Next.js App Router integration
+- GSAP Flip plugin for shared element transitions
+- CSS `@view-transition` for declarative transitions
+- Barba.js for vanilla JavaScript implementations
+
+## Expected Output
+
+### Component Structure
+
+```
+components/
+  transitions/
+    TransitionLayout.jsx
+    PageTransition.jsx
+    SharedElement.jsx
+    RouteTransition.jsx
+  transitions/variants/
+    fadeTransition.js
+    slideTransition.js
+    scaleTransition.js
+    clipTransition.js
+    coverTransition.js
+    staggerTransition.js
+  transitions/hooks/
+    usePageTransition.js
+    useSharedElement.js
+    useNavigationDirection.js
+```
+
+### Code Requirements
+
+- Provide a `<TransitionLayout>` wrapper component that integrates with the router
+- Each transition variant should be a configuration object (not a separate component)
+- Support per-route transition overrides via route metadata
+- Include hooks for programmatic transition control
+- Handle SSR compatibility (transitions only activate on client)
+- Export TypeScript types for transition configuration
+
+### Accessibility
+
+- Transitions must not prevent keyboard navigation
+- Screen readers should announce page changes via `aria-live` regions
+- Respect `prefers-reduced-motion` — use instant or very fast crossfade
+- Focus management: move focus to the main content area after transition
+- Ensure no content is hidden from assistive technology during transition
+- Skip transition option for users who trigger rapid navigation
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/page-transitions.md","category":"animations","name":"page-transitions","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Page Transitions Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Page Transitions Prompt — Free Animation prompt module (6.3 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/page-transitions/"}],["$","meta","9",{"property":"og:title","content":"Page Transitions Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/page-transitions/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

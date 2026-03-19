@@ -1,0 +1,183 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","3d-background",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","3d-background","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","3d-background","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T1ca5,# Immersive 3D Animated Background Prompt
+
+## Role
+
+You are a creative developer specializing in real-time 3D graphics for the web.
+You have deep expertise with WebGL, Three.js, and shader programming (GLSL). You
+build immersive, GPU-accelerated visual experiences that serve as living
+backgrounds for websites — captivating without overwhelming the foreground content.
+You balance visual spectacle with performance, ensuring smooth frame rates across
+devices.
+
+## Task
+
+Create an immersive, full-viewport 3D animated background that can sit behind
+website content. The background should feature dynamic elements — particles, waves,
+geometric shapes, or organic forms — rendered in real time with WebGL. It must be
+interactive (responding to mouse or scroll) and performant enough to serve as a
+persistent page background without degrading the user experience.
+
+## Design Goals
+
+- **Atmospheric depth**: The 3D scene creates a sense of space and immersion that
+  flat CSS backgrounds cannot achieve.
+- **Subtlety at rest**: When the user is not interacting, the animation is calm
+  and ambient — slow drifts, gentle pulses, soft color shifts.
+- **Responsive to interaction**: Mouse movement, scroll position, or device
+  orientation subtly influences the scene (camera angle, particle behavior,
+  wave amplitude).
+- **Content harmony**: The background enhances but never competes with foreground
+  text and UI. It should feel like a living canvas beneath the page.
+
+## Requirements
+
+### Scene Options (implement at least 2)
+
+1. **Particle Field**: Thousands of floating particles in 3D space connected by
+   faint lines when within proximity. Particles drift slowly, react to mouse
+   position (repel or attract), and shift color over time. Camera slowly orbits.
+
+2. **Undulating Wave Mesh**: A subdivided plane geometry whose vertices displace
+   vertically using sine/noise functions, creating a rolling ocean or terrain
+   effect. Color maps to height. Mouse influences wave origin or amplitude.
+
+3. **Geometric Constellation**: Floating 3D primitives (icosahedrons, octahedrons,
+   torus knots) that rotate independently, connected by thin lines or light beams.
+   Mouse proximity causes shapes to scatter or cluster.
+
+4. **Gradient Blob / Metaball**: Soft organic shapes rendered with raymarching in
+   a fragment shader. Blobs merge and separate like a lava lamp. Colors shift
+   through a defined palette.
+
+### Visual Requirements
+
+1. Color palette driven by CSS custom properties passed to the shader via
+   JavaScript, so the background can be re-themed without editing shader code.
+2. Subtle depth-of-field or fog effect to create atmospheric perspective.
+3. Smooth color transitions — no harsh jumps. Use gradient palettes or HSL
+   interpolation.
+4. Optional post-processing: bloom, chromatic aberration, or film grain at
+   low intensity.
+
+### Interaction
+
+1. Mouse/pointer position influences at least one parameter (camera rotation,
+   force field origin, wave amplitude, light position).
+2. Scroll position maps to at least one visual change (zoom level, color shift,
+   scene rotation, particle density).
+3. On touch devices, use device orientation (gyroscope) as an alternative to
+   mouse input, with a fallback to touch position.
+4. All interactions must be smoothly interpolated (lerp) to avoid jerky
+   transitions.
+
+### Performance
+
+1. Target 60fps on mid-range hardware (e.g., MacBook Air M1, iPhone 12,
+   Samsung Galaxy S21).
+2. Implement a performance monitor that automatically reduces particle count,
+   disables post-processing, or lowers resolution if frame rate drops below 30fps.
+3. Canvas resolution should respect `window.devicePixelRatio` but cap at 2x to
+   avoid GPU strain on high-DPI displays.
+4. Use `requestAnimationFrame` for the render loop. Pause rendering when the
+   tab is not visible (`document.visibilitychange`).
+5. Dispose of all Three.js geometries, materials, and textures on unmount to
+   prevent memory leaks.
+
+### Integration
+
+1. The 3D canvas is positioned `fixed` behind all page content with
+   `z-index: -1` and `pointer-events: none` (except for mouse tracking via a
+   transparent overlay or document-level listener).
+2. Foreground content scrolls normally on top of the canvas.
+3. Provide a simple API or configuration object to initialize the background:
+   ```js
+   initBackground({
+     container: '#bg-canvas',
+     scene: 'particles',  // or 'waves', 'geometric', 'blobs'
+     colors: ['#6C63FF', '#FF6584', '#43E97B'],
+     intensity: 0.7,       // 0-1 scale
+     interactive: true
+   });
+   ```
+4. Include a "reduce motion" mode that freezes the scene to a static state when
+   `prefers-reduced-motion` is active.
+
+### Accessibility
+
+1. The canvas element has `aria-hidden="true"` since it is purely decorative.
+2. No critical information is conveyed through the 3D scene.
+3. A `prefers-reduced-motion` listener stops all animation and shows a static
+   gradient or blurred snapshot instead.
+
+## Technology Suggestions
+
+| Layer         | Recommended                                          |
+|---------------|------------------------------------------------------|
+| 3D Engine     | Three.js (r160+)                                     |
+| Shaders       | Custom GLSL vertex/fragment shaders                  |
+| Post-Process  | Three.js EffectComposer or custom passes             |
+| Interaction   | Pointer events + lerp, optional DeviceOrientation    |
+| Noise         | simplex-noise or GLSL noise functions                |
+| Framework     | Vanilla JS, React Three Fiber, or Svelte Threlte     |
+| Build Tool    | Vite with GLSL import plugin                          |
+| Performance   | Stats.js for dev, adaptive quality system            |
+
+## Expected Output Structure
+
+```
+3d-background/
+  index.html                  # Demo page with foreground content + 3D bg
+  css/
+    variables.css             # Color tokens consumed by JS
+    page.css                  # Foreground content styles
+  js/
+    background.js             # Main init, config, and API
+    scenes/
+      particles.js            # Particle field scene
+      waves.js                # Wave mesh scene
+      geometric.js            # Geometric constellation scene
+      blobs.js                # Metaball / blob shader scene
+    utils/
+      performance.js          # Adaptive quality manager
+      interaction.js          # Mouse/scroll/gyro input handler
+      color.js                # Color parsing and shader uniform helpers
+  shaders/
+    particles.vert            # Particle vertex shader
+    particles.frag            # Particle fragment shader
+    waves.vert                # Wave displacement vertex shader
+    waves.frag                # Wave color mapping fragment shader
+    blobs.frag                # Raymarching metaball fragment shader
+  assets/
+    textures/                 # Particle sprites, noise textures
+```
+
+## Evaluation Criteria
+
+- Visual quality and immersive atmosphere of the 3D scenes.
+- Interaction feels natural and responsive (no lag or jerk).
+- Maintains 60fps on target hardware; adaptive quality works correctly.
+- Background integrates seamlessly with foreground content.
+- Configuration API is clean and easy to use.
+- Memory management is sound — no leaks on mount/unmount cycles.
+- Reduced-motion fallback is implemented and tested.
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"3d/3d-background.md","category":"3d","name":"3d-background","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Immersive 3D Animated Background Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Immersive 3D Animated Background Prompt — Free 3D Effect prompt module (7.1 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/3d-background/"}],["$","meta","9",{"property":"og:title","content":"Immersive 3D Animated Background Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free 3D Effect prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/3d-background/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

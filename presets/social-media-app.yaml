@@ -1,0 +1,51 @@
+name: social-media-app
+description: A feature-rich social media application with multiple UI styles, real-time feeds, and immersive animations for an engaging experience.
+category: specialized
+
+prompts:
+  - layouts/social-feed-layout.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/modern-ui.md
+        - ui/glassmorphism-ui.md
+        - ui/aurora-ui.md
+        - ui/gradient-ui.md
+        - ui/minimal-ui.md
+        - ui/claymorphism-ui.md
+
+  # Animations — randomly pick 4
+  - pick_n:
+      count: 4
+      from:
+        - animations/microinteractions.md
+        - animations/stagger-animations.md
+        - animations/scroll-animations.md
+        - animations/cursor-effects.md
+        - animations/liquid-animations.md
+        - animations/morphing-animations.md
+        - animations/particle-effects.md
+        - animations/hover-effects.md
+        - animations/loading-animations.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: false
+
+metadata:
+  difficulty: advanced
+  estimated_components: 35
+  tags:
+    - social
+    - media
+    - feed
+    - post
+    - profile
+    - network
+    - community
+    - chat
+    - stories

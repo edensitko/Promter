@@ -1,0 +1,45 @@
+name: consultant-website
+description: A professional consultant website with multiple refined UI styles and smooth animations for building trust with a fresh look.
+category: landing
+
+prompts:
+  # Core layout — always included
+  - layouts/landing-layout.md
+  - layouts/routing.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/minimal-ui.md
+        - ui/modern-ui.md
+        - ui/neumorphism-ui.md
+        - ui/organic-ui.md
+        - ui/art-deco-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/hover-effects.md
+        - animations/scroll-animations.md
+        - animations/page-transitions.md
+        - animations/animated-buttons.md
+        - animations/microinteractions.md
+        - animations/stagger-animations.md
+        - animations/text-animations.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: false
+
+metadata:
+  difficulty: beginner
+  estimated_components: 10
+  tags:
+    - consultant
+    - professional
+    - randomized
+    - services

@@ -1,0 +1,146 @@
+# 3D Hero Section Prompt
+
+## Role
+
+You are a senior frontend designer and 3D web specialist with deep expertise in immersive web experiences, real-time particle systems, procedural animation, and cinematic scene composition. You have created hero sections for product launches, creative agencies, blockchain platforms, and technology startups where the first five seconds of visual impact determine whether a visitor stays or bounces. You understand how to balance awe-inspiring 3D visuals with fast load times, and you design hero experiences that tell a story through motion, depth, and interactivity before the user reads a single word.
+
+## Task
+
+Design and build a full-viewport 3D hero section that serves as the dramatic opening of a website. The hero combines animated 3D geometric objects, a dynamic particle field, and an immersive procedural background to create a sense of depth and motion that draws the user into the page. Overlaid on the 3D scene are the hero headline, subheadline, and a call-to-action button, all integrated spatially with the 3D environment (text reacts to parallax on scroll, CTA button has a subtle 3D hover state). The scene must respond to mouse movement for a parallax depth effect, animate smoothly on scroll to transition into the content below, and loop an ambient idle animation when the user is not interacting. The entire experience must load fast, render smoothly, and degrade gracefully on every device.
+
+## 3D Design Goals
+
+- **Cinematic first impression**: The hero must feel like stepping into a scene -- depth of field, atmospheric haze, and slow dramatic camera movement create an editorial, almost film-like opening moment.
+- **Living, breathing motion**: Nothing in the scene is static. Geometric objects rotate slowly, particles drift and swirl, light pulses gently, and the background subtly shifts color over time, giving the scene an organic, alive quality.
+- **Spatial storytelling**: The arrangement of 3D objects creates a visual narrative -- objects emerge from the background depth, frame the headline text, and guide the eye toward the CTA, forming a clear visual hierarchy in 3D space.
+- **Reactive to user presence**: Mouse movement causes subtle parallax across all depth layers and shifts the ambient light direction. Scroll transforms the scene: objects spread apart, the camera pulls back, and the hero content fades as the page transitions to the next section.
+- **Brand-aligned atmosphere**: The color palette, object geometry, and particle behavior must be fully configurable via a theme object so the hero can adapt to any brand identity -- from a neon cyberpunk aesthetic to a soft organic gradient world.
+- **Performance as a feature**: The scene must feel premium on a flagship phone and still look intentional on a budget Android. Performance tiers are a design consideration, not an afterthought.
+
+## Scene Description
+
+The hero occupies 100vh (full viewport height) with the Three.js canvas rendered as a fixed background layer behind the HTML content overlay.
+
+**Background Layer**: A procedural gradient sky generated via a custom shader. The gradient transitions smoothly between 3-4 brand colors over time (cycle period: 30 seconds), creating a living backdrop. Optional: subtle noise displacement on the gradient for a fabric/aurora-like texture. A faint grid or dot-matrix pattern recedes into the vanishing point to reinforce depth perspective.
+
+**Particle Field (Mid-ground)**: A system of 2,000-5,000 particles (instanced points or small sprites) distributed in a cylindrical volume centered on the camera. Particles drift slowly upward and outward in a gentle vortex pattern, with slight random turbulence. Each particle has a soft glow (additive blending) and varies in size (1-4px) and opacity (0.2-0.8). Particles close to the camera are larger and blurred (simulated depth of field via size attenuation), while distant particles are pin-sharp and dim. The particle field responds to mouse movement -- particles near the cursor are gently repelled, creating an interactive void that follows the pointer.
+
+**3D Objects (Foreground)**: A composition of 5-8 abstract geometric shapes (icosahedrons, torus knots, octahedrons, rounded cubes, and custom low-poly forms) floating at various depths and positions around the hero text. Each object has a distinct PBR material -- some metallic and reflective, some translucent with refraction, some with a wireframe overlay. Objects rotate slowly on their own axes at different speeds and bob gently up and down with sine-wave motion (varying phase and amplitude). Objects closer to the text are larger and more detailed; peripheral objects are smaller and partially transparent, creating depth.
+
+**Lighting**: An ambient hemisphere light (sky color warm, ground color cool) provides base illumination. A single animated directional light orbits slowly around the scene center (period: 20 seconds), casting moving highlights and shadows across the geometric objects. A subtle point light near the CTA button area creates a warm focal glow. Optional: volumetric light rays (god rays) using a post-processing pass, emanating from the upper-left corner.
+
+**Camera**: A perspective camera positioned at Z = 50, looking at the origin. The camera does not use orbit controls. Instead, mouse movement causes the camera to shift slightly on X and Y axes (max offset: 2 units), creating a parallax window effect into the 3D scene. On scroll, the camera pulls back along Z while tilting slightly downward, creating a dramatic reveal-and-recede transition as the hero section scrolls away.
+
+## Interaction Model
+
+- **Mouse Parallax (Desktop)**: Camera position shifts proportionally to the cursor's offset from viewport center (X: +/-2 units, Y: +/-1 unit), with smooth lerp interpolation (factor: 0.05). 3D objects at different Z-depths shift at different rates, creating true parallax layering. The particle repulsion zone (radius: 50px logical) follows the cursor with a slight delay.
+- **Device Tilt (Mobile)**: On devices with a gyroscope, the camera parallax is driven by device orientation (gentle, constrained to +/-3 degrees mapped to +/-1 unit camera offset). This creates a magical "looking around" effect when the user tilts their phone.
+- **Scroll Transition**: As the user scrolls down, the hero section undergoes a choreographed exit:
+  - 0-30% scroll: Hero text fades out with a slight upward drift, CTA button scales down and fades.
+  - 0-60% scroll: Camera pulls back from Z=50 to Z=80, objects spread apart (scale positions by 1.5x), particles accelerate outward.
+  - 40-100% scroll: Background gradient desaturates and darkens, transitioning into the next section's background color. The canvas opacity fades to 0 at 100%.
+  - All scroll animations use `transform` and `opacity` only, driven by a scroll progress value (0 to 1) calculated from `scrollY / viewportHeight`.
+- **Idle Animation**: When no interaction is detected for 3 seconds, the ambient animation continues: objects rotate, particles drift, light orbits, gradient cycles. This is the "autopilot" mode that ensures the hero always looks alive, even in a screenshot.
+- **Reduced Motion**: If `prefers-reduced-motion` is active, disable all parallax, reduce particle count to 500, slow all rotation speeds by 80%, and disable the scroll transition animation (hero content simply fades out on scroll via CSS `opacity`).
+
+## Technical Requirements
+
+- The 3D scene must render in a single WebGL 2.0 context on a `<canvas>` element positioned `fixed` behind the page content, with `pointer-events: none` so it does not interfere with content interaction.
+- Target **60 fps** on mid-range devices (iPhone 12, Pixel 6, M1 MacBook Air) and **30 fps minimum** on budget devices (iPhone SE 2020, Galaxy A13).
+- The hero must be **above-the-fold optimized**: the initial meaningful paint (gradient background + headline text) must appear within 500ms. The 3D scene loads and fades in progressively over the next 1-2 seconds.
+- Use **shader-based particles** (custom `ShaderMaterial` with `gl_PointSize` and `gl_FragColor` in the vertex/fragment shaders) instead of sprite-based particles to minimize draw calls to 1 for the entire system.
+- All geometric objects should use **instanced rendering** where possible. If objects have different geometries, group by material and minimize shader switches.
+- Implement a **performance tier detection** system that runs a quick GPU benchmark (render 3 test frames, measure time) on first load and selects one of three quality presets:
+  - **High**: Full particle count (5000), post-processing (bloom, god rays), high-res textures, full shader complexity.
+  - **Medium**: Reduced particles (2000), no post-processing, simplified shaders, lower pixel ratio (1.5x).
+  - **Low**: Minimal particles (500), no transparency/refraction materials, solid colors only, pixel ratio 1.0, no scroll animation on the 3D scene.
+- The 3D render loop must **pause** when the hero section is scrolled out of view (Intersection Observer) to free the GPU for the rest of the page.
+- Implement **proper cleanup** on unmount: dispose all geometries, materials, textures, render targets, and the renderer itself.
+- The hero text overlay must be **real HTML** (not rendered in WebGL) for SEO, accessibility, and text selection. Position it with CSS `position: absolute` over the canvas.
+
+## Technology Suggestions
+
+- **Three.js** -- core WebGL rendering engine
+- **React Three Fiber (@react-three/fiber)** -- declarative React scene graph for Three.js
+- **@react-three/drei** -- utilities: `Float` (bobbing animation), `MeshTransmissionMaterial` (glass/refraction), `MeshDistortMaterial` (organic warping), `Stars`, `Environment`, `useProgress`
+- **@react-three/postprocessing** -- bloom, god rays, vignette, tone mapping
+- **Custom GLSL Shaders** -- procedural gradient background, particle system, noise-based distortion
+- **GSAP + ScrollTrigger** -- scroll-driven animation timeline for the hero exit choreography with scrubbing
+- **Lenis** -- smooth scroll library for consistent scroll progress values across browsers
+- **Framer Motion** -- hero text entrance animations and CTA hover/press micro-interactions
+- **Zustand** -- shared state for performance tier, scroll progress, mouse position, and theme
+- **Tailwind CSS** -- responsive typography, layout, and spacing for the HTML overlay content
+
+## Performance Guidelines
+
+- **Particle Budget**: High tier: 5,000 particles in a single draw call (shader material with `BufferGeometry`). Each particle is a point with position (vec3), velocity (vec3), size (float), opacity (float) stored in buffer attributes. Animation runs entirely in the vertex shader -- zero JS overhead per frame for particle movement.
+- **Geometry Budget**: Total scene geometry should stay under 50K triangles. Geometric objects use low-poly aesthetics (icosahedron detail level 1-2, torus knot tubular segments 32-48) as a deliberate style choice that also benefits performance.
+- **Shader Complexity**: Background gradient shader: 1 full-screen quad pass. Particle shader: 1 draw call with custom vertex/fragment. Object materials: max 5 unique materials (batched). Post-processing: max 2 passes (bloom + composite). Total GPU passes per frame: under 10.
+- **Texture Budget**: Zero external textures in the base scene (all procedural). If environment maps are used for reflections, use a tiny (64x64) precomputed cubemap or `PMREMGenerator` from a solid-color environment. Total texture memory: under 2 MB.
+- **Load Sequence**: 1) HTML shell + CSS gradient background renders immediately (0ms JS dependency). 2) React hydrates, hero text animates in (200ms). 3) Three.js initializes, canvas fades in with a low-detail scene (500ms). 4) Full detail ramps up over 1 second (particles spawn incrementally, objects fade in one by one with staggered delays).
+- **Mobile Pixel Ratio**: Cap at `Math.min(devicePixelRatio, 2.0)` on high tier, `1.5` on medium, `1.0` on low. The visual difference between 2x and 3x is negligible on small screens but the GPU cost is 2.25x.
+- **Scroll Performance**: Scroll progress calculation must use a passive scroll listener or `IntersectionObserver` thresholds. Never read `scrollY` inside `requestAnimationFrame` without debouncing. The GSAP ScrollTrigger handles this optimally.
+- **Memory Ceiling**: Total JS heap for the hero section should stay under 30 MB. Monitor with `performance.memory` in development and flag regressions.
+
+## Expected Output
+
+### Component Structure
+
+```
+Hero3D/
+  Hero3D.tsx                    # Full hero section: canvas + HTML overlay
+  Scene.tsx                     # Three.js scene: objects, particles, lights, background
+  objects/
+    FloatingObjects.tsx          # Composition of animated geometric shapes
+    GeometricObject.tsx          # Individual object: mesh, material, animation
+    objectConfigs.ts             # Position, rotation speed, material, scale for each object
+  particles/
+    ParticleField.tsx            # Shader-based particle system component
+    particleShader.vert          # Vertex shader: position, size, animation
+    particleShader.frag          # Fragment shader: soft glow, opacity, color
+  background/
+    ProceduralBackground.tsx     # Full-screen gradient sky quad
+    backgroundShader.vert        # Vertex shader: simple quad
+    backgroundShader.frag        # Fragment shader: animated gradient, noise, grid
+  lighting/
+    HeroLighting.tsx             # Hemisphere, directional orbit, point accent lights
+  overlay/
+    HeroContent.tsx              # HTML overlay: headline, subheadline, CTA
+    HeroHeadline.tsx             # Animated heading with entrance + scroll-out
+    HeroCTA.tsx                  # CTA button with 3D hover effect and glow
+  hooks/
+    useMouseParallax.ts          # Mouse/gyroscope to camera offset mapping
+    useScrollProgress.ts         # Scroll position normalized to 0-1 for hero exit
+    usePerformanceTier.ts        # GPU benchmark and quality preset selection
+    useHeroStore.ts              # Zustand store: scroll, mouse, tier, theme
+  utils/
+    performanceBenchmark.ts      # Quick 3-frame GPU timing test
+    shaderUtils.ts               # GLSL noise functions, common shader snippets
+    easing.ts                    # Lerp, smoothstep, spring math utilities
+  types/
+    hero.types.ts                # TypeScript interfaces for theme, config, tier presets
+```
+
+### Code Requirements
+
+- Written in **TypeScript** with strict mode and full type coverage. Shader source files (`.vert`, `.frag`) imported as raw strings via the bundler.
+- All components must be **functional React components** with hooks. The scene graph must be fully declarative using React Three Fiber's JSX syntax.
+- The hero must be configurable via a single **`HeroConfig`** object that controls: color palette (gradient colors, object tints, particle color), object count and arrangement, particle density and behavior, animation speeds, text content, and CTA action. This enables reuse across different pages or brands with zero code changes.
+- Shader code must be **well-commented** with explanations of each mathematical operation for maintainability by developers unfamiliar with GLSL.
+- The scroll choreography must be defined as a **declarative timeline** (array of keyframes with progress thresholds and property targets) rather than imperative scroll listeners, making it easy to adjust timing.
+- Follow **ESLint + Prettier** conventions with consistent formatting and no unused imports or variables.
+- Include **unit tests** for math utilities (lerp, smoothstep, performance tier logic) and **visual regression tests** (screenshot comparison) for the hero at key scroll positions (0%, 50%, 100%).
+- Export a clean public API: `<Hero3D />` component + `HeroConfig` type + `useHeroControls` hook for programmatic camera/animation control.
+
+### Fallback Strategy
+
+- If WebGL is unavailable, render a **CSS-only hero** with:
+  - An animated CSS gradient background (`@keyframes` shifting `background-position`) that mirrors the procedural gradient's color scheme.
+  - CSS-animated floating geometric shapes using `clip-path` polygons with `transform: rotate()` and `translateY()` keyframes to simulate the 3D objects.
+  - A radial gradient "particle" effect using a tiled CSS `radial-gradient` background layer with a slow drift animation.
+  - All hero text and CTA remain identical, fully functional, and properly positioned.
+- On the **Low performance tier**, the 3D scene is active but heavily simplified: solid-color unlit materials, 500 particles, no post-processing, no transparency. The experience still feels intentional as a "minimalist geometric" aesthetic.
+- If JavaScript fails entirely, the hero renders as **static HTML** with a CSS gradient background, centered text, and a functional CTA button. This is the SSR output that hydrates into the full 3D experience.
+- For `prefers-reduced-motion`, the scene is **static or near-static**: objects are frozen in an aesthetically pleasing arrangement (their default positions), particles are hidden, and the gradient is a fixed blend. The scroll exit uses a simple CSS `opacity` transition. The visual quality remains high -- it simply does not move.
+- If the `DeviceOrientationEvent` permission is denied or unavailable on mobile, **disable parallax entirely** rather than falling back to touch-drag, which would conflict with scrolling.
+- All fallback states must maintain the **same visual hierarchy** (headline prominence, CTA visibility, brand colors) so conversion goals are preserved regardless of device capability.

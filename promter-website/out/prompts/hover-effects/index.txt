@@ -1,0 +1,142 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","hover-effects",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","hover-effects","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","hover-effects","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T156b,# Hover Effects Prompt
+
+## Role
+
+You are a senior frontend designer and interaction specialist with deep expertise in micro-interactions and hover state design. You create hover effects that feel responsive, polished, and purposeful — enhancing usability without sacrificing performance.
+
+## Task
+
+Design and implement a comprehensive collection of reusable hover effects for common UI elements including buttons, cards, images, links, navigation items, and icons. Each effect should be smooth, performant, and accessible.
+
+## Animation Goals
+
+- Create hover effects that feel instant and responsive (under 200ms for simple transitions)
+- Ensure all animations use GPU-accelerated properties (transform, opacity) where possible
+- Provide visual feedback that reinforces the interactive nature of elements
+- Maintain consistency across the design system while offering variety
+- Support both mouse hover and focus states for keyboard accessibility
+
+## Hover Effect Catalog
+
+### Card Hover Effects
+
+#### Lift Effect
+Card rises with a subtle shadow increase, creating a sense of elevation. Use `transform: translateY(-4px)` paired with an expanding `box-shadow`. Ideal for product cards, blog post cards, and feature cards.
+
+#### Glow Effect
+A soft colored glow appears around the card border on hover. Use `box-shadow` with a spread radius matching the brand color at low opacity. Best for dark-themed UIs and highlight cards.
+
+#### Border Reveal
+A gradient or solid border animates in from one corner, tracing the card perimeter. Use pseudo-elements with `clip-path` or width/height transitions. Great for portfolio items and testimonial cards.
+
+#### Content Shift
+Inner content subtly rearranges — a hidden CTA button slides in, description text expands, or an overlay appears. Use `max-height` transitions or transform-based reveals.
+
+### Button Hover Effects
+
+#### Fill Sweep
+Background color sweeps from left to right (or any direction) using a pseudo-element with `transform: scaleX()`. The text color inverts as the fill passes beneath it.
+
+#### Ripple Effect
+A radial ripple emanates from the cursor position on hover. Implemented with a pseudo-element and `radial-gradient` or JavaScript for cursor-tracking accuracy.
+
+#### Underline Grow
+An underline expands from center outward or from left to right beneath the button text. Uses `transform: scaleX()` on a pseudo-element for smooth GPU-accelerated animation.
+
+#### Magnetic Pull
+Button subtly moves toward the cursor as it approaches, creating a magnetic feel. Requires JavaScript for cursor position tracking and `transform: translate()`.
+
+### Image Hover Effects
+
+#### Zoom and Pan
+Image scales up slightly (1.05–1.1x) within its container using `overflow: hidden` and `transform: scale()`. Optionally pans in the direction of the cursor.
+
+#### Overlay Fade
+A semi-transparent overlay fades in over the image with text, icons, or CTAs. Use `opacity` transitions on an absolutely positioned overlay element.
+
+#### Grayscale to Color
+Image displays in grayscale by default and transitions to full color on hover using `filter: grayscale()`. Effective for team photos and portfolio grids.
+
+#### Parallax Tilt
+Image tilts subtly based on cursor position within the element, creating a 3D parallax effect. Requires JavaScript for cursor tracking and `transform: perspective() rotateX() rotateY()`.
+
+### Link and Navigation Hover Effects
+
+#### Sliding Underline
+Underline slides in from left or expands from center using `transform: scaleX()` with `transform-origin`. Standard for navigation links.
+
+#### Background Highlight
+A subtle background color fades in behind the link text. Use `background-color` with transition or a pseudo-element for more control over shape and position.
+
+#### Text Glitch
+Characters briefly scramble or shift on hover before resolving to the correct text. Requires JavaScript for character manipulation with CSS transitions for positioning.
+
+## Technical Requirements
+
+- All transitions must use `will-change` or `transform`/`opacity` for GPU acceleration
+- Transition durations between 150ms and 300ms for most effects
+- Use `cubic-bezier` easing for natural-feeling motion (avoid linear)
+- No layout-triggering properties in transitions (avoid animating width, height, top, left, margin, padding)
+- All hover states must have equivalent `:focus-visible` states for keyboard users
+- Effects must not cause content layout shifts (CLS)
+
+## Technology Suggestions
+
+- CSS Transitions and Animations
+- CSS Custom Properties for theming hover colors and durations
+- Framer Motion (for React-based implementations)
+- Tailwind CSS with custom utilities
+- Vanilla JavaScript for cursor-tracking effects
+
+## Expected Output
+
+### Component Structure
+
+```
+components/
+  hover/
+    HoverCard.jsx
+    HoverButton.jsx
+    HoverImage.jsx
+    HoverLink.jsx
+    HoverIcon.jsx
+  utils/
+    useCursorPosition.js
+    useHoverState.js
+```
+
+### Code Requirements
+
+- Each effect should be a reusable component or CSS utility class
+- Support customization through props or CSS custom properties
+- Include TypeScript types for all component props
+- Export individual effects for tree-shaking
+- Include Storybook-ready examples
+
+### Accessibility
+
+- All hover effects must have matching `:focus-visible` styles
+- Respect `prefers-reduced-motion` by disabling or simplifying animations
+- Ensure sufficient color contrast in all hover states
+- Interactive elements must remain clearly identifiable in their hover state
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/hover-effects.md","category":"animations","name":"hover-effects","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Hover Effects Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Hover Effects Prompt — Free Animation prompt module (5.3 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/hover-effects/"}],["$","meta","9",{"property":"og:title","content":"Hover Effects Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/hover-effects/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

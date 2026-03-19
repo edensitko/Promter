@@ -1,0 +1,33 @@
+{
+  "name": "ai-website-presets",
+  "version": "1.0.0",
+  "description": "A toolkit of reusable prompts and presets for AI-powered website generation",
+  "main": "cli/generate-site.js",
+  "bin": {
+    "generate-site": "cli/generate-site.js"
+  },
+  "scripts": {
+    "generate": "node cli/generate-site.js",
+    "list": "node cli/generate-site.js --list"
+  },
+  "keywords": [
+    "ai",
+    "website",
+    "presets",
+    "prompts",
+    "generator",
+    "frontend",
+    "ui",
+    "design-system",
+    "tailwind",
+    "react",
+    "nextjs",
+    "ai-coding",
+    "prompt-engineering"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

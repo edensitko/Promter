@@ -1,0 +1,121 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","animated-cards",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","animated-cards","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","animated-cards","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T14c9,# Animated Cards Prompt
+
+## Role
+
+You are a senior frontend designer and interaction specialist with expertise in card-based UI patterns and micro-animations. You design card components that are visually engaging, highly interactive, and maintain excellent usability.
+
+## Task
+
+Create a comprehensive library of animated card components for use across various website types. Each card variant should feature unique animation behaviors for hover, entrance, interaction, and transition states. Cards must be flexible, responsive, and reusable.
+
+## Animation Goals
+
+- Create cards that invite interaction through subtle, continuous, or triggered animation
+- Ensure animations reinforce content hierarchy and user understanding
+- Maintain 60fps performance across all animation states
+- Balance visual impact with usability — animations should never obscure content
+- Provide smooth transitions between card states (default, hover, active, expanded)
+
+## Card Animation Catalog
+
+### Flip Card
+A two-sided card that rotates on hover to reveal additional content on the back. Uses `transform: rotateY(180deg)` with `backface-visibility: hidden` on both faces. The front shows a summary (image, title), the back shows details (description, CTA). Transition duration: 500–600ms with ease-in-out.
+
+### Tilt Card
+Card tilts dynamically based on cursor position, creating a 3D perspective effect. Uses JavaScript to calculate cursor position relative to the card center, then applies `transform: perspective(1000px) rotateX() rotateY()`. Add a glossy light reflection that follows the tilt angle for extra polish.
+
+### Expand Card
+Card expands from its grid position to fill a larger area (or the full viewport) when clicked. Content morphs from a compact summary to a detailed view. Use `layout` animations (Framer Motion) or FLIP technique for smooth positional transitions. Other cards fade or shift to accommodate.
+
+### Stacked Card Carousel
+Cards are stacked with slight offsets (like a deck). Swiping or clicking fans them out or cycles through the stack. Each card has a slight rotation and shadow that changes as it moves through the stack. Creates a tactile, physical feel.
+
+### Glow Border Card
+Card features a subtle animated gradient border that shifts colors continuously or reacts to cursor proximity. Implemented with a pseudo-element background gradient that rotates via CSS animation, masked by the card's inner content area. Particularly effective on dark backgrounds.
+
+### Morphing Card
+Card shape or layout morphs smoothly between states. A circular avatar card might expand into a rectangular profile card. A compact metric card might morph into a detailed chart view. Use `clip-path` animations or layout transitions.
+
+### Parallax Content Card
+Card content layers (background image, overlay, text) move at different rates on hover, creating internal parallax depth. The background shifts opposite to cursor movement, text shifts slightly with it. Subtle but creates a premium feel.
+
+### Skeleton to Content Card
+Card starts as a skeleton loading state with animated gradient shimmer. Content elements (image, text, badges) animate in individually with staggered fade-up once data loads. Each element replaces its skeleton counterpart with a smooth crossfade.
+
+## Technical Requirements
+
+- All transform-based animations must use `will-change: transform` sparingly (only during animation)
+- Card flip and tilt effects require `perspective` on parent or `transform-style: preserve-3d`
+- Expand animations should use the FLIP (First, Last, Invert, Play) technique for layout transitions
+- Touch device support: tilt follows touch position, flip triggers on tap
+- Cards must maintain their aspect ratio across responsive breakpoints
+- Stagger animations when multiple cards enter the viewport simultaneously
+- Clean up event listeners and animation frames on component unmount
+
+## Technology Suggestions
+
+- React with Framer Motion for layout animations
+- CSS `transform-style: preserve-3d` for 3D card effects
+- GSAP for complex timeline-based card animations
+- CSS `@property` for animating gradient borders
+- Tailwind CSS for base card styling and responsive grid
+- `react-spring` as an alternative physics-based animation library
+
+## Expected Output
+
+### Component Structure
+
+```
+components/
+  cards/
+    FlipCard.jsx
+    TiltCard.jsx
+    ExpandCard.jsx
+    StackedCards.jsx
+    GlowCard.jsx
+    MorphCard.jsx
+    ParallaxCard.jsx
+    SkeletonCard.jsx
+  cards/hooks/
+    useTilt.js
+    useExpand.js
+    useCardStack.js
+```
+
+### Code Requirements
+
+- Each card variant should be a self-contained component
+- Support customization via props: animation speed, intensity, colors, content slots
+- Include both controlled and uncontrolled variants for expand/stack cards
+- Provide CSS-only fallbacks for flip and glow effects
+- Export a `CardGrid` layout component that handles staggered entrance animations
+- Include TypeScript interfaces for all props
+
+### Accessibility
+
+- Flip cards must have both sides accessible to screen readers
+- Expanded cards must trap focus and support Escape to close
+- Tilt effects should be disabled when `prefers-reduced-motion` is set
+- All interactive cards must have proper `role`, `aria-label`, and keyboard support
+- Touch targets must meet minimum 44x44px size requirements
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/animated-cards.md","category":"animations","name":"animated-cards","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Animated Cards Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Animated Cards Prompt — Free Animation prompt module (5.2 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/animated-cards/"}],["$","meta","9",{"property":"og:title","content":"Animated Cards Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/animated-cards/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

@@ -1,0 +1,54 @@
+name: fintech-dashboard
+description: A sophisticated fintech dashboard with multiple premium UI styles, real-time data animations, and immersive 3D visualizations.
+category: dashboard
+
+prompts:
+  - layouts/dashboard-layout.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/dark-ui.md
+        - ui/modern-ui.md
+        - ui/glassmorphism-ui.md
+        - ui/art-deco-ui.md
+        - ui/futuristic-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/microinteractions.md
+        - animations/scroll-animations.md
+        - animations/loading-animations.md
+        - animations/stagger-animations.md
+        - animations/morphing-animations.md
+        - animations/hover-effects.md
+        - animations/animated-cards.md
+
+  - pick_one:
+      - 3d/3d-dashboard.md
+      - 3d/3d-globe.md
+      - 3d/3d-particles.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: true
+
+metadata:
+  difficulty: advanced
+  estimated_components: 30
+  tags:
+    - fintech
+    - banking
+    - finance
+    - dashboard
+    - payment
+    - trading
+    - investment
+    - money
+    - stocks
+    - crypto

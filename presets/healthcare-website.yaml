@@ -1,0 +1,48 @@
+name: healthcare-website
+description: A clean, trustworthy healthcare website with multiple calming UI styles, accessible design, and smooth, reassuring animations.
+category: landing
+
+prompts:
+  - layouts/landing-layout.md
+
+  # UI styles — randomly pick 2
+  - pick_n:
+      count: 2
+      from:
+        - ui/minimal-ui.md
+        - ui/modern-ui.md
+        - ui/organic-ui.md
+        - ui/claymorphism-ui.md
+        - ui/neumorphism-ui.md
+
+  # Animations — randomly pick 3
+  - pick_n:
+      count: 3
+      from:
+        - animations/scroll-animations.md
+        - animations/microinteractions.md
+        - animations/stagger-animations.md
+        - animations/hover-effects.md
+        - animations/animated-buttons.md
+        - animations/loading-animations.md
+        - animations/text-animations.md
+
+settings:
+  primary_framework: Next.js
+  css_framework: Tailwind CSS
+  animations: true
+  3d_elements: false
+
+metadata:
+  difficulty: beginner
+  estimated_components: 16
+  tags:
+    - healthcare
+    - medical
+    - hospital
+    - doctor
+    - clinic
+    - health
+    - wellness
+    - appointment
+    - patient

@@ -1,0 +1,122 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","retro-ui",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","retro-ui","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","retro-ui","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T1176,# Retro / Vintage UI Design Prompt
+
+## Role
+
+You are a senior UI designer and front-end developer specializing in retro-inspired,
+nostalgic web experiences. You have deep knowledge of design trends from the 1980s
+through the early 2000s, pixel art aesthetics, CRT monitor effects, and vintage
+computing culture. You translate that nostalgia into modern, accessible, and
+performant web interfaces.
+
+## Task
+
+Generate a fully functional, single-page website that embraces a retro or vintage
+visual identity. The page should feel like a love letter to classic computing,
+early internet culture, or arcade aesthetics while remaining usable on modern
+devices and screen sizes.
+
+## Design Goals
+
+- **Nostalgic atmosphere**: Evoke the warmth and charm of retro computing through
+  deliberate color choices, typography, and decorative elements.
+- **Pixel-perfect details**: Incorporate pixel fonts, chunky borders, dithering
+  patterns, and CRT-style visual effects where appropriate.
+- **Playful interactivity**: Include hover states, click feedback, and micro-animations
+  that reference old-school UI paradigms (window chrome, dialog boxes, progress bars).
+- **Modern usability**: Despite the retro veneer, the site must be responsive,
+  keyboard-navigable, and screen-reader friendly.
+
+## Requirements
+
+### Visual Design
+
+1. Use a color palette inspired by vintage hardware — amber/green monochrome monitors,
+   early Macintosh palettes, Commodore 64 colors, NES/SNES palettes, or Windows 95
+   system colors.
+2. Primary typeface must be a pixel or bitmap-style font (e.g., Press Start 2P,
+   VT323, Silkscreen, or a custom pixel font loaded via `@font-face`).
+3. Borders and containers should use double-line or inset/outset beveled styles
+   reminiscent of classic OS window frames.
+4. Include at least one decorative CRT scanline or noise overlay (CSS-only preferred).
+5. Buttons must feature a pressed/depressed 3D effect using `box-shadow` and
+   `border` manipulation.
+6. Background may use a subtle repeating tile pattern or dithered gradient.
+
+### Layout
+
+1. A top menu bar styled like a classic OS toolbar (File, Edit, View, Help).
+2. A hero section designed as a retro "desktop" with draggable or stacked window panels.
+3. A content area presenting information inside window-frame containers with title bars,
+   minimize/maximize/close buttons.
+4. A footer styled as a status bar with a blinking cursor or scrolling marquee text.
+
+### Interactivity
+
+1. Hover effects on buttons must mimic the tactile feel of old-school UI controls.
+2. At least one element should feature a typewriter or terminal text animation.
+3. Optional: a fake "boot sequence" or "loading screen" that plays on first visit.
+4. Optional: sound effects triggered by interactions (with a mute toggle).
+
+### Responsiveness
+
+1. The layout must adapt gracefully to mobile viewports while preserving the retro
+   aesthetic.
+2. Window-frame containers should stack vertically on narrow screens.
+3. Font sizes must remain legible at all breakpoints.
+
+## Technology Suggestions
+
+| Layer         | Recommended                                      |
+|---------------|--------------------------------------------------|
+| Markup        | Semantic HTML5                                   |
+| Styling       | CSS3 (custom properties, grid, flexbox)          |
+| Fonts         | Google Fonts (Press Start 2P, VT323)             |
+| Animation     | CSS keyframes, optional GSAP for advanced motion |
+| Framework     | Vanilla JS, or lightweight (Svelte, Astro)       |
+| Build Tool    | Vite                                             |
+| Accessibility | ARIA roles, skip-links, prefers-reduced-motion   |
+
+## Expected Output Structure
+
+```
+retro-ui/
+  index.html          # Main document
+  css/
+    variables.css     # Color palette, font stacks, spacing scale
+    base.css          # Reset, global styles, CRT overlay
+    components.css    # Window frames, buttons, toolbar, status bar
+    responsive.css    # Breakpoint overrides
+  js/
+    main.js           # Boot sequence, typewriter effect, interactions
+  assets/
+    fonts/            # Pixel / bitmap font files
+    images/           # Tile patterns, pixel art decorations
+```
+
+## Evaluation Criteria
+
+- Authenticity of the retro feel without sacrificing usability.
+- Clean, well-commented code organized into logical modules.
+- Smooth performance — no layout shifts, minimal repaints.
+- Accessibility audit passes with zero critical violations.
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"ui/retro-ui.md","category":"ui","name":"retro-ui","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Retro / Vintage UI Design Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Retro / Vintage UI Design Prompt — Free UI Style prompt module (4.4 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/retro-ui/"}],["$","meta","9",{"property":"og:title","content":"Retro / Vintage UI Design Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free UI Style prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/retro-ui/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"

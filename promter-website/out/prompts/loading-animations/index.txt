@@ -1,0 +1,151 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+5:I[4431,[],"OutletBoundary"]
+7:I[5278,[],"AsyncMetadataOutlet"]
+9:I[4431,[],"ViewportBoundary"]
+b:I[4431,[],"MetadataBoundary"]
+c:"$Sreact.suspense"
+e:I[7150,[],""]
+:HL["/_next/static/css/c1fb67edca13f2a5.css","style"]
+0:{"P":null,"b":"EGqLyM_CJH2YCrc5vqhpE","p":"","c":["","prompts","loading-animations",""],"i":false,"f":[[["",{"children":["prompts",{"children":[["id","loading-animations","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c1fb67edca13f2a5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap","rel":"stylesheet"}]}],["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}],{"children":["prompts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["id","loading-animations","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L4",null,["$","$L5",null,{"children":["$L6",["$","$L7",null,{"promise":"$@8"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L9",null,{"children":"$La"}],null],["$","$Lb",null,{"children":["$","div",null,{"hidden":true,"children":["$","$c",null,{"fallback":null,"children":"$Ld"}]}]}]]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[6479,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+10:I[828,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+11:T1761,# Creative Loading Animations Prompt
+
+## Role
+
+You are a motion design specialist and front-end developer focused on creating
+polished, purposeful loading states and progress indicators. You understand that
+loading moments are opportunities to reinforce brand identity, reduce perceived
+wait times, and keep users engaged. You craft loading animations that are
+lightweight, accessible, and visually delightful.
+
+## Task
+
+Build a collection of creative loading state components: spinners, skeleton
+screens, progress indicators, and full-page loading experiences. Each component
+must be production-ready, performant, and easy to drop into any web project.
+Deliver them as a showcase page where every loading pattern can be previewed
+and its code inspected.
+
+## Design Goals
+
+- **Perceived performance**: Animations should make wait times feel shorter by
+  providing visual feedback and a sense of forward momentum.
+- **Brand-ready**: Each loader should be easily customizable through CSS custom
+  properties (colors, sizes, timing) so teams can adapt them to any brand.
+- **Lightweight**: All animations must be CSS-only or use minimal JavaScript.
+  No heavy libraries. Total bundle impact should be negligible.
+- **Accessible**: Every animation respects `prefers-reduced-motion`. Loaders
+  include appropriate ARIA attributes (`role="status"`, `aria-live="polite"`,
+  visually hidden status text).
+
+## Requirements
+
+### Spinner Variants (minimum 4)
+
+1. **Dot spinner**: A ring of dots that pulse or rotate sequentially.
+2. **Arc spinner**: A single animated arc that rotates around a circle, with
+   varying stroke-dasharray for a "chasing" effect.
+3. **Morphing spinner**: A shape (square, circle, triangle) that continuously
+   morphs between forms while rotating.
+4. **Logo spinner**: A placeholder brand mark that fills, pulses, or draws
+   itself in using SVG stroke animation.
+
+### Skeleton Screens (minimum 3)
+
+1. **Card skeleton**: Mimics an article card — image placeholder, title lines,
+   excerpt lines, and avatar circle. All placeholders feature a shimmer wave
+   animation (left-to-right gradient sweep).
+2. **Table skeleton**: Represents a data table with header row and 5 content
+   rows. Column widths vary to look realistic.
+3. **Profile skeleton**: User profile layout with a large avatar circle, name
+   line, bio lines, and stat counters.
+
+### Progress Indicators (minimum 3)
+
+1. **Linear progress bar**: A horizontal bar with smooth fill animation. Must
+   support both determinate (percentage-driven) and indeterminate (continuous
+   sweep) modes.
+2. **Circular progress ring**: An SVG circle whose `stroke-dashoffset` animates
+   to show percentage completion. Centered percentage text updates in real time.
+3. **Step progress tracker**: A horizontal row of numbered steps connected by
+   lines. Completed steps are filled; the active step pulses; future steps are
+   dimmed.
+
+### Full-Page Loaders (minimum 2)
+
+1. **Overlay loader**: A semi-transparent backdrop with a centered spinner and
+   optional status message that updates ("Connecting...", "Loading assets...",
+   "Almost there...").
+2. **Branded splash screen**: A full-screen loader with a logo animation
+   (draw-in, pulse, or fade) and a slim progress bar at the bottom. Transitions
+   out with a smooth reveal (clip-path, opacity, or slide).
+
+### Technical Requirements for Each Component
+
+1. Built with semantic HTML and scoped CSS (no style leakage).
+2. Colors, sizes, and animation durations controlled via CSS custom properties.
+3. Every animation uses `will-change` or `transform`/`opacity` only to stay on
+   the compositor thread (no animating `width`, `height`, `left`, `top`).
+4. `prefers-reduced-motion: reduce` media query replaces motion with a static
+   or faded alternative.
+5. ARIA attributes: `role="status"`, `aria-live="polite"`, and a visually hidden
+   `<span>` with descriptive text (e.g., "Loading content, please wait").
+
+### Showcase Page
+
+1. A gallery layout presenting all loaders organized by category (Spinners,
+   Skeletons, Progress, Full-Page).
+2. Each component is shown in a preview card with a label and brief description.
+3. A toggle to simulate active / completed states for progress components.
+4. A toggle to preview `prefers-reduced-motion` behavior.
+
+## Technology Suggestions
+
+| Layer         | Recommended                                         |
+|---------------|-----------------------------------------------------|
+| Markup        | Semantic HTML5, inline SVG for circular elements    |
+| Styling       | CSS3 keyframes, custom properties, `@layer`         |
+| SVG Animation | SMIL or CSS for stroke animations                   |
+| JavaScript    | Minimal — Intersection Observer, toggles only       |
+| Framework     | Vanilla JS or Web Components for encapsulation      |
+| Build Tool    | Vite                                                |
+| Accessibility | ARIA live regions, `prefers-reduced-motion`         |
+
+## Expected Output Structure
+
+```
+loading-animations/
+  index.html                # Showcase gallery page
+  css/
+    variables.css           # Shared tokens (colors, sizes, durations)
+    base.css                # Reset, showcase page layout
+    spinners.css            # All spinner animations
+    skeletons.css           # Skeleton shimmer styles
+    progress.css            # Progress bar and ring styles
+    full-page.css           # Overlay and splash screen styles
+    reduced-motion.css      # Simplified alternatives
+  js/
+    main.js                 # Toggle controls, progress simulation
+  assets/
+    svg/                    # Logo placeholder SVGs
+```
+
+## Evaluation Criteria
+
+- Visual polish and variety of loading patterns.
+- Animations run at 60fps with no layout thrashing.
+- Every component is fully accessible (ARIA + reduced-motion).
+- CSS custom properties make rebranding trivial.
+- Code is modular — each loader can be extracted independently.
+- Showcase page is clear, organized, and easy to navigate.
+4:[["$","$Lf",null,{}],["$","main",null,{"className":"pt-28 pb-16","children":["$","$L10",null,{"prompt":{"path":"animations/loading-animations.md","category":"animations","name":"loading-animations","content":"$11"}}]}],"$L12"]
+13:I[9880,["288","static/chunks/288-d96db58948a16dca.js","388","static/chunks/app/prompts/%5Bid%5D/page-8f568c435117fc9a.js"],"default"]
+12:["$","$L13",null,{}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:null
+14:I[622,[],"IconMark"]
+8:{"metadata":[["$","title","0",{"children":"Creative Loading Animations Prompt — Promter"}],["$","meta","1",{"name":"description","content":"Creative Loading Animations Prompt — Free Animation prompt module (5.8 KB). Copy and use with ChatGPT, Claude, Cursor, or any AI coding assistant."}],["$","meta","2",{"name":"author","content":"Promter"}],["$","meta","3",{"name":"keywords","content":"AI website generator,AI prompts,website prompts,prompt library,AI coding assistant,ChatGPT prompts,Claude prompts,Cursor prompts,website templates,prompt engineering,UI design prompts,glassmorphism,3D web effects,Next.js templates,Tailwind CSS,web development,AI web design"}],["$","meta","4",{"name":"creator","content":"Promter"}],["$","meta","5",{"name":"publisher","content":"Promter"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","meta","7",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","8",{"rel":"canonical","href":"https://promter.dev/prompts/loading-animations/"}],["$","meta","9",{"property":"og:title","content":"Creative Loading Animations Prompt — Promter"}],["$","meta","10",{"property":"og:description","content":"Free Animation prompt module. Copy and paste into any AI assistant to generate websites."}],["$","meta","11",{"property":"og:url","content":"https://promter.dev/prompts/loading-animations/"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"Promter — Generate Complete Websites with AI"}],["$","meta","14",{"name":"twitter:description","content":"50+ modular prompts and 27 templates for generating production-ready websites with any AI coding assistant."}],["$","meta","15",{"name":"twitter:image","content":"https://promter.dev/logo/og-image.png"}],["$","link","16",{"rel":"icon","href":"/logo/5.png"}],["$","link","17",{"rel":"apple-touch-icon","href":"/logo/5.png"}],["$","$L14","18",{}]],"error":null,"digest":"$undefined"}
+d:"$8:metadata"
