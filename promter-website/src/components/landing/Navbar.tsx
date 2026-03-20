@@ -33,7 +33,7 @@ export default function Navbar() {
           : "bg-white/[0.03] backdrop-blur-md border-white/[0.06]"
       }`}>
         <Link href="/" className="flex items-center">
-          <Image src="/logo/2.png" alt="Promter logo" width={80} height={80} className="rounded-lg" />
+          <Image src="/logo/2.png" alt="Promter logo" width={80} height={80} className="rounded-lg w-[50px] h-[50px] sm:w-[80px] sm:h-[80px]" />
         </Link>
 
         <ul className="hidden md:flex items-center gap-8">

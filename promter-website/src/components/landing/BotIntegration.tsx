@@ -82,42 +82,46 @@ export default function BotIntegration() {
           </div>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid md:grid-cols-3 gap-4 mb-8">
           {/* Endpoints */}
           <ScrollReveal>
-            <div className="glass rounded-2xl p-6 ring-1 ring-white/[0.06] h-full">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center ring-1 ring-white/[0.06]">
-                  <Globe size={18} className="text-accent" />
+            <div className="glass rounded-2xl p-5 ring-1 ring-white/[0.06] h-full">
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 flex items-center justify-center ring-1 ring-white/[0.06]">
+                  <Globe size={16} className="text-accent" />
                 </div>
                 <h3 className="text-sm font-semibold text-white">Public Endpoints</h3>
               </div>
 
-              <div className="space-y-3">
-                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.05]">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-[10px] font-bold text-accent/70 bg-accent/10 px-1.5 py-0.5 rounded">GET</span>
-                    <span className="text-xs font-mono text-white/60">/api/prompts.json</span>
+              <div className="space-y-2.5">
+                <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[9px] font-bold text-accent/70 bg-accent/10 px-1.5 py-0.5 rounded">GET</span>
+                    <span className="text-[11px] font-mono text-white/60">/api/prompts.json</span>
                   </div>
-                  <p className="text-[11px] text-white/30">
-                    All prompt MD files — UI styles, layouts, animations, 3D effects. Keyed by path.
-                  </p>
+                  <p className="text-[10px] text-white/30">All prompt MD files — UI styles, layouts, animations, 3D effects.</p>
                 </div>
 
-                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.05]">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-[10px] font-bold text-accent/70 bg-accent/10 px-1.5 py-0.5 rounded">GET</span>
-                    <span className="text-xs font-mono text-white/60">/api/presets.json</span>
+                <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[9px] font-bold text-accent/70 bg-accent/10 px-1.5 py-0.5 rounded">GET</span>
+                    <span className="text-[11px] font-mono text-white/60">/api/presets.json</span>
                   </div>
-                  <p className="text-[11px] text-white/30">
-                    All template/preset configs — module combinations, categories, metadata.
-                  </p>
+                  <p className="text-[10px] text-white/30">All template configs — module combinations, categories, metadata.</p>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[9px] font-bold text-accent/70 bg-accent/10 px-1.5 py-0.5 rounded">GET</span>
+                    <span className="text-[11px] font-mono text-white/60">/api/skill.md</span>
+                  </div>
+                  <p className="text-[10px] text-white/30">Bot skill file — system prompt for website generation.</p>
                 </div>
               </div>
 
-              <div className="mt-5 p-3 rounded-xl bg-white/[0.03] border border-white/[0.05]">
-                <p className="text-[10px] text-white/25 leading-relaxed">
-                  No authentication &middot; No rate limits &middot; Static JSON &middot; Updated on every deploy
+              <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                <p className="text-[9px] text-white/25 leading-relaxed">
+                  No auth &middot; No rate limits &middot; Static &middot; Updated on deploy
                 </p>
               </div>
             </div>
@@ -125,38 +129,76 @@ export default function BotIntegration() {
 
           {/* Use cases */}
           <ScrollReveal>
-            <div className="glass rounded-2xl p-6 ring-1 ring-white/[0.06] h-full">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center ring-1 ring-white/[0.06]">
-                  <Bot size={18} className="text-primary-light" />
+            <div className="glass rounded-2xl p-5 ring-1 ring-white/[0.06] h-full">
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center ring-1 ring-white/[0.06]">
+                  <Bot size={16} className="text-primary-light" />
                 </div>
                 <h3 className="text-sm font-semibold text-white">Use Cases</h3>
               </div>
 
-              <div className="space-y-3">
+              <div className="space-y-2.5">
                 {[
-                  {
-                    title: "Claude / ChatGPT Bot on EC2",
-                    desc: "Fetch prompts, feed them to an AI model, and auto-generate full websites on your server.",
-                  },
-                  {
-                    title: "CI/CD Pipeline",
-                    desc: "Pull the latest prompts in your build pipeline to scaffold new projects automatically.",
-                  },
-                  {
-                    title: "Discord / Slack Bot",
-                    desc: "Let users request website generation from a chat command — your bot fetches the prompt and returns code.",
-                  },
-                  {
-                    title: "Custom Agent",
-                    desc: "Build an autonomous agent that picks the right prompts based on user requirements and generates websites.",
-                  },
+                  { title: "Bot on EC2 / Server", desc: "Fetch prompts, feed to a model, auto-generate full websites." },
+                  { title: "CI/CD Pipeline", desc: "Pull latest prompts to scaffold new projects automatically." },
+                  { title: "Discord / Slack Bot", desc: "Users request websites from chat — bot fetches & generates." },
+                  { title: "Custom Agent", desc: "Autonomous agent picks prompts based on requirements." },
                 ].map((item) => (
-                  <div key={item.title} className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.05]">
-                    <p className="text-[11px] font-semibold text-white/60 mb-1">{item.title}</p>
+                  <div key={item.title} className="p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                    <p className="text-[11px] font-semibold text-white/60 mb-0.5">{item.title}</p>
                     <p className="text-[10px] text-white/30 leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Skill Install */}
+          <ScrollReveal>
+            <div className="glass rounded-2xl p-5 ring-1 ring-white/[0.06] h-full">
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#FF8A65]/20 to-[#FF8A65]/5 flex items-center justify-center ring-1 ring-white/[0.06]">
+                  <Terminal size={16} className="text-[#FF8A65]" />
+                </div>
+                <h3 className="text-sm font-semibold text-white">Install Skill</h3>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-2.5">
+                  <span className="w-5 h-5 rounded-full bg-accent/10 text-accent text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5 ring-1 ring-accent/20">1</span>
+                  <div className="flex-1">
+                    <p className="text-[10px] text-white/40 mb-1.5">Claude Code:</p>
+                    <div className="rounded-lg bg-black/20 border border-white/[0.05] px-2.5 py-2">
+                      <code className="text-[10px] font-mono text-white/50 break-all">curl -o CLAUDE.md https://promter.dev/api/skill.md</code>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2.5">
+                  <span className="w-5 h-5 rounded-full bg-accent/10 text-accent text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5 ring-1 ring-accent/20">2</span>
+                  <div className="flex-1">
+                    <p className="text-[10px] text-white/40 mb-1.5">Cursor:</p>
+                    <div className="rounded-lg bg-black/20 border border-white/[0.05] px-2.5 py-2">
+                      <code className="text-[10px] font-mono text-white/50 break-all">curl -o .cursor/rules/promter.md https://promter.dev/api/skill.md</code>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2.5">
+                  <span className="w-5 h-5 rounded-full bg-accent/10 text-accent text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5 ring-1 ring-accent/20">3</span>
+                  <div className="flex-1">
+                    <p className="text-[10px] text-white/40 mb-1.5">Then ask:</p>
+                    <div className="rounded-lg bg-black/20 border border-white/[0.05] px-2.5 py-2">
+                      <code className="text-[10px] font-mono text-white/50 italic">&quot;Build me a SaaS landing page&quot;</code>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-3 p-2.5 rounded-xl bg-white/[0.03] border border-white/[0.05]">
+                <p className="text-[9px] text-white/25">
+                  Works with: <span className="text-white/35">Claude Code</span> &middot; <span className="text-white/35">Cursor</span> &middot; <span className="text-white/35">Windsurf</span> &middot; <span className="text-white/35">Copilot</span>
+                </p>
               </div>
             </div>
           </ScrollReveal>
